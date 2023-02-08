@@ -1,0 +1,15 @@
+#app {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Nunito";
+  }
+
+  html {
+    scroll-behavior: smooth;
+   }
+  
