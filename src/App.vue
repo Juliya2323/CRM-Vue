@@ -1,14 +1,25 @@
 <template lang="pug">
-h1.title Pug
+.wrapper
+    side-bar
+    router-view
 </template>
 
 <script>
-import Analytics from './pages/Analytics.vue';
+import SideBar from './layout/SideBar.vue';
+import Analytict from './pages/Analytics.vue';
 import Dashboard from './pages/Dashboard.vue';
 
-
+export default {
+    components: {
+        SideBar,
+        Analytict,
+        Dashboard
+    }
+}
 </script>
 
 <style scoped lang="scss">
-
+.wrapper {
+    display: flex;
+}
 </style>
