@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue';
+import { ref } from 'vue';
 import Logo from "../assets/icons/logo.svg";
 const mode = ref('dashboard');
 function switchMode(mode) {

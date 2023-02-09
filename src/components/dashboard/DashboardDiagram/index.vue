@@ -1,7 +1,7 @@
 <template lang="pug">
 base-card
     template(v-slot:header)
-        h2.diagram_title Analytics
+        span Analytics
     template(v-slot:default)
         img.diagram_img
         ul.diagram_list 
@@ -22,12 +22,6 @@ base-card
         width: 100%;
         box-sizing: border-box;
         height: 100%;
-
-        &_title {
-            margin: 0;
-            font-weight: 700;
-            font-size: 18px;
-        }
 
         &_list {
             margin: 0;
