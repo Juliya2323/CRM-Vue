@@ -8,8 +8,13 @@
 import SideBar from './layout/SideBar.vue';
 import Analytict from './pages/Analytics.vue';
 import Dashboard from './pages/Dashboard.vue';
+import { useDashboardStore } from './store/dashboard.js';
 
 export default {
+    setup() {
+        const dashboard = useDashboardStore();
+        return {dashboard};
+    },
     components: {
         SideBar,
         Analytict,
@@ -23,7 +28,6 @@ export default {
     display: flex;
     width: 100%;
     height: 100vh;
-    gap: 30px;
     background-color: var(--grey);
 }
 </style>
