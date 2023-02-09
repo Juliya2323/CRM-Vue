@@ -52,6 +52,8 @@ function switchMode(mode) {
     gap: 15px;
     padding: 0 53px 0;
     justify-content: center;
+    align-items: center;
+    cursor: pointer;
 
     &_title {
       margin: 0;

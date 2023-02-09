@@ -2,8 +2,8 @@
 .dashboard
     section.dashboard_tabs
         ul.dashboard_list
-            li(class=".dashboard_list_item" v-for = "product in dashboard.products" :key = "product.key") 
-                dashboard-tab(:icon="product.icon" :amount="product.amount" :title="product.title" :id="product.id")
+            li(class=".dashboard_list_item" v-for = "tab in dashboard.tabs" :key = "tab.key") 
+                dashboard-tab(:icon="tab.icon" :amount="tab.amount" :title="tab.title" :id="tab.id")
     section.dashboard_section
         .dashboard_item_left 
             img.dashboard_img(:src="main")

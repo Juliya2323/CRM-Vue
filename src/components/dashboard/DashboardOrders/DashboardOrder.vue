@@ -40,7 +40,7 @@ export default {
     display: flex;
     gap: 10px;
     justify-content: flex-start;
-    align-items: left;
+    align-items: center;
   }
 
   &_price {

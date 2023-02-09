@@ -26,9 +26,7 @@ export default {
   gap: 40px;
   width: 268px;
   position: relative;
-
-  @media (max-width: 1440px) {
-  }
+  cursor: pointer;
 
   &_img {
     display: flex;
@@ -47,12 +45,14 @@ export default {
       margin: 0;
       font-weight: 800;
       font-size: 22px;
+      color:var(--dark);
     }
 
     &_title {
       margin: 0;
       font-weight: 400;
       font-size: 14px;
+      color:var(--medium);
     }
   }
 }

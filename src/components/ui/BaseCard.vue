@@ -19,7 +19,7 @@
     width: 100%;
     box-sizing: border-box;
     height: 100%;
-
+    color: var(--dark);
 
     &_header {
         display: flex;

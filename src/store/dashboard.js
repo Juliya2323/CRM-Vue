@@ -3,7 +3,7 @@ import { defineStore } from 'pinia';
 export const useDashboardStore = defineStore("dashboard", {
     state: () => {
       return {
-        products: [
+        tabs: [
           {
             id: 'first',
             icon: '../../src/assets/icons/heart.svg',
@@ -63,6 +63,22 @@ export const useDashboardStore = defineStore("dashboard", {
             amount: '3,46,981'
           }
 
+        ],
+        products: [
+          {
+            id: '1',
+            img: '../../../src/assets/images/nike.jpg',
+            name: 'NIKE Shoes Black Pattern',
+            rating: '../../../src/assets/icons/four.svg',
+            cost: 87
+          },
+          {
+            id: '1',
+            img: '../../../src/assets/images/iphone.jpg',
+            name: 'NIKE Shoes Black Pattern',
+            rating: '../../../src/assets/icons/five.svg',
+            cost: 987
+          },
         ]
       };
     },
