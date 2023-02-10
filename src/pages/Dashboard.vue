@@ -57,7 +57,6 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
 
   &_title {
@@ -82,9 +81,11 @@ export default {
       font-family: "Nunito";
       position: relative;
       cursor: pointer;
+      transition: all 0.3s ease-out;
 
       &:hover {
-        border: 0.5px solid var(--dark);
+        background-color: rgba(38, 192, 226, 20%);
+        border: 0.4px solid var(--medium)
       }
 
       &::after {
