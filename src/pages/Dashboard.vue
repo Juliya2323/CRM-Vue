@@ -1,5 +1,10 @@
 <template lang="pug">
 .dashboard
+    header.dashboard_header 
+      h2.dashboard_title Dashboard
+      .dashboard_calendar
+        button.dashboard_calendar_btn 10-06-2021
+        button.dashboard_calendar_btn 10-10-2021
     section.dashboard_tabs
         ul.dashboard_list
             li(class=".dashboard_list_item" v-for = "tab in dashboard.tabs" :key = "tab.key") 
@@ -42,11 +47,54 @@ export default {
 .dashboard {
   width: 100%;
   margin: 0;
-  padding: 30px;
+  padding: 28px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  &_title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  &_calendar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    &_btn {
+      padding: 11px 33px 10px 17px;
+      background-color: var(--white);
+      border: 0.5px solid transparent;
+      border-radius: 7px;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--medium);
+      font-family: "Nunito";
+      position: relative;
+      cursor: pointer;
+
+      &:hover {
+        border: 0.5px solid var(--dark);
+      }
+
+      &::after {
+        content: url('../assets/icons/arrow2.svg');
+        position: absolute;
+        right: 14px;
+        top: 9px;
+      }
+    }
+  }
 
   &_list {
     list-style-type: none;
@@ -75,7 +123,7 @@ export default {
     justify-content: space-between;
     gap: 30px;
     width: 100%;
-    height: 41vh;
+    height: 39vh;
   }
 
   &_img {

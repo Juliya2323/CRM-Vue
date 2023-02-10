@@ -12,8 +12,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 25px;
-    gap: 24px;
+    padding: 22px 26px;
+    gap: 22px;
     background-color: var(--white);
     border-radius: 10px;
     width: 100%;

@@ -18,12 +18,12 @@ export default {
     display: flex;
     justify-content: flex-start;
     gap: 20px;
-    padding: 22px 0;
+    padding: 18px 0;
     border-bottom: 1.5px solid #FAFAFB;
     cursor: pointer;
 
     &:hover {
-        background-color: #FAFAFB;
+        
     }
 
     &_img {

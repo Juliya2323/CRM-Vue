@@ -14,18 +14,23 @@
           g(opacity="0.4" :class="{ active: mode === 'analitics'}")
             path(:class="{ active: mode === 'analitics'}" fill-rule="evenodd" clip-rule="evenodd" d="M7.33037 2.00049H16.6694C20.0704 2.00049 21.9904 3.92949 22.0004 7.33049V16.6705C22.0004 20.0705 20.0704 22.0005 16.6694 22.0005H7.33037C3.92937 22.0005 2.00037 20.0705 2.00037 16.6705V7.33049C2.00037 3.92949 3.92937 2.00049 7.33037 2.00049ZM12.0494 17.8605C12.4804 17.8605 12.8394 17.5405 12.8794 17.1105V6.92049C12.9194 6.61049 12.7704 6.29949 12.5004 6.13049C12.2194 5.96049 11.8794 5.96049 11.6104 6.13049C11.3394 6.29949 11.1904 6.61049 11.2194 6.92049V17.1105C11.2704 17.5405 11.6294 17.8605 12.0494 17.8605ZM16.6504 17.8605C17.0704 17.8605 17.4294 17.5405 17.4804 17.1105V13.8305C17.5094 13.5095 17.3604 13.2105 17.0894 13.0405C16.8204 12.8705 16.4804 12.8705 16.2004 13.0405C15.9294 13.2105 15.7804 13.5095 15.8204 13.8305V17.1105C15.8604 17.5405 16.2194 17.8605 16.6504 17.8605ZM8.21937 17.1105C8.17937 17.5405 7.82037 17.8605 7.38937 17.8605C6.95937 17.8605 6.59937 17.5405 6.56037 17.1105V10.2005C6.53037 9.88949 6.67937 9.58049 6.95037 9.41049C7.21937 9.24049 7.56037 9.24049 7.83037 9.41049C8.09937 9.58049 8.25037 9.88949 8.21937 10.2005V17.1105Z" fill="#030229")
         router-link.nav_list_item_link(to='/analytics' @click="switchMode('analitics')" :class="{ active: mode === 'analitics'}") Analytics
-  .sidebar_manage 
-    .manage_wrapper 
-      img.manage_bg(src='../assets/images/manage_bg.jpg')
-      base-button.manage_button Upgrade Now
-    .manage_account hello
-    
+  .sidebar_wrapper 
+    .sidebar_upgrade 
+      img.upgrade_bg(src='../assets/images/manage_bg.jpg')
+      base-button.upgrade_button Upgrade Now
+    .sidebar_account 
+      .account_info 
+        img.account_info_img(src="../assets/images/account.png", alt="photo")
+        .account_info_text 
+          h3.info_text_name Easin Arafat
+          h3.info_text_position Free Account
+      img.account_logout(src="../assets/icons/logout.svg" alt="logout")
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 import Logo from "../assets/icons/logo.svg";
-const mode = ref('dashboard');
+const mode = ref("dashboard");
 function switchMode(mode) {
   this.mode = mode;
 }
@@ -140,33 +145,64 @@ function switchMode(mode) {
   fill: var(--purple);
   opacity: 1;
   color: var(--purple);
-  
 }
 
-.sidebar_manage {
+.sidebar_wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
 
-  .manage_wrapper {
+  .sidebar_upgrade {
     position: relative;
     display: flex;
     justify-content: center;
     justify-content: center;
 
-    .manage_bg {
-      background-color: url('../assets/icons/manage_bg.svg');
+    .upgrade_bg {
+      background-color: url("../assets/icons/manage_bg.svg");
     }
 
-    .manage_button {
+    .upgrade_button {
       position: absolute;
       bottom: 20px;
     }
   }
 
-  
-}
+  .sidebar_account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    cursor: pointer;
 
+    .account_info {
+      display: flex;
+      justify-content: flex-start;
+      gap: 10px;
+
+      &_text {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        align-items: flex-start;
+        justify-content: center;
+
+        .info_text_name {
+          font-weight: 600;
+          font-size: 12px;
+          margin: 0;
+        }
+
+        .info_text_position {
+          font-weight: 400;
+          font-size: 10px;
+          color: var(--medium);
+          margin: 0;
+        }
+      }
+    }
+  }
+}
 </style>

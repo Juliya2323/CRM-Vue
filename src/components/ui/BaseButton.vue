@@ -13,5 +13,10 @@ button {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
 }
 </style>
