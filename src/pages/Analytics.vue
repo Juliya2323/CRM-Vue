@@ -26,13 +26,8 @@
 import { useAnalyticsStore } from "../store/analytics.js";
 import AnalyticsItem from "../components/analytics/AnalyticsItem/index.vue";
 
-export default {
-  setup() {
-    const analytics = useAnalyticsStore();
-    return { analytics };
-  },
-  components: { AnalyticsItem },
-};
+const analytics = useAnalyticsStore();
+    
 </script>
 
 <style scoped lang="scss">

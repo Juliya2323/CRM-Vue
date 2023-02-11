@@ -21,7 +21,8 @@
             dashboard-products
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue';
 import { useDashboardStore } from "../store/dashboard.js";
 import DashboardTab from "../components/dashboard/DashboardTab/index.vue";
 import DashboardDiagram from "../components/dashboard/DashboardDiagram/index.vue";
@@ -29,18 +30,8 @@ import DashboardOrders from "../components/dashboard/DashboardOrders/index.vue";
 import DashboardProducts from "../components/dashboard/DashboardProducts/index.vue";
 import Main from "../assets/icons/main.svg";
 
-export default {
-  setup() {
-    const dashboard = useDashboardStore();
-    return { dashboard };
-  },
-  components: { DashboardTab, DashboardDiagram, DashboardOrders, DashboardProducts },
-  data() {
-    return {
-      main: Main,
-    };
-  },
-};
+const dashboard = useDashboardStore();
+const main = ref(Main)
 </script>
 
 <style scoped lang="scss">

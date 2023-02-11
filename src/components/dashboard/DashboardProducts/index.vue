@@ -12,15 +12,9 @@ base-card
 import DashboardProduct from './DashboardProduct.vue';
 import { useDashboardStore } from "../../../store/dashboard.js";
 
-export default {
-    components: {
-        DashboardProduct
-    },
-    setup() {
-        const dashboard = useDashboardStore();
-        return { dashboard };
-    },
-}
+
+const dashboard = useDashboardStore();
+        
 </script>
 
 <style scoped lang="scss">

@@ -7,10 +7,10 @@
         h3.product_cost ${{ cost }}
 </template>
 
-<script>
-export default {
-    props: ["img", "name", "rating", "cost"],
-}
+<script setup>
+
+const props = defineProps(["img", "name", "rating", "cost"]);
+
 </script>
 
 <style scoped lang="scss">

@@ -14,19 +14,12 @@ base-card
                 dashboard-order(:no="order.id", :img="order.img", :name="order.name", :price="order.price", :total="order.total", :amount="order.amount")
 </template>
 
-<script>
+<script setup>
 import DashboardOrder from "../DashboardOrders/DashboardOrder.vue";
 import { useDashboardStore } from "../../../store/dashboard.js";
 
-export default {
-  components: {
-    DashboardOrder,
-  },
-  setup() {
-    const dashboard = useDashboardStore();
-    return { dashboard };
-  },
-};
+const dashboard = useDashboardStore();
+    
 </script>
 
 <style scoped lang="scss">

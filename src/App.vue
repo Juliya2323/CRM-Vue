@@ -4,23 +4,14 @@
     router-view
 </template>
 
-<script>
+<script setup>
 import SideBar from './layout/SideBar.vue';
 import Analytict from './pages/Analytics.vue';
 import Dashboard from './pages/Dashboard.vue';
 import { useDashboardStore } from './store/dashboard.js';
 
-export default {
-    setup() {
-        const dashboard = useDashboardStore();
-        return {dashboard};
-    },
-    components: {
-        SideBar,
-        Analytict,
-        Dashboard
-    }
-}
+const dashboard = useDashboardStore();
+
 </script>
 
 <style scoped lang="scss">

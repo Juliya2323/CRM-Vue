@@ -15,10 +15,10 @@
         img.more_img(src="../../../assets/icons/more_purple.svg")
 </template>
 
-<script>
-export default {
-    props: ["id", "img", "name", "email", "date", "status"]
-}
+<script setup>
+
+const props = defineProps(["id", "img", "name", "email", "date", "status"]);
+
 </script>
 
 <style scoped lang="scss">

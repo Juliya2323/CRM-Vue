@@ -9,10 +9,9 @@
     .order_amount ${{ amount }}
 </template>
 
-<script>
-export default {
-  props: ["no", "img", "name", "price", "total", "amount"],
-};
+<script setup>
+const props = defineProps(["no", "img", "name", "price", "total", "amount"]);
+
 </script>
 
 <style scoped lang="scss">

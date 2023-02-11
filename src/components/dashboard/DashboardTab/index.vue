@@ -7,10 +7,10 @@
      h4.tab_description_title {{ title }}  
 </template>
 
-<script>
-export default {
-  props: ["id", "icon", "amount", "title"],
-};
+<script setup>
+
+const props = defineProps(["id", "icon", "amount", "title"]);
+
 </script>
 
 <style scoped lang="scss">
