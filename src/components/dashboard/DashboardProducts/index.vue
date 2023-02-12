@@ -8,7 +8,7 @@ base-card
                dashboard-product(:img="product.img" :name="product.name" :rating="product.rating" :cost="product.cost")
 </template>
 
-<script>
+<script setup>
 import DashboardProduct from './DashboardProduct.vue';
 import { useDashboardStore } from "../../../store/dashboard.js";
 

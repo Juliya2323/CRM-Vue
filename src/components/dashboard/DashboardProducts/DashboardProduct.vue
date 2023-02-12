@@ -18,12 +18,12 @@ const props = defineProps(["img", "name", "rating", "cost"]);
     display: flex;
     justify-content: flex-start;
     gap: 20px;
-    padding: 18px 0;
+    padding: 14px 0;
     border-bottom: 1.5px solid #FAFAFB;
     cursor: pointer;
 
     &:hover {
-        
+        background-color: #FAFAFB;
     }
 
     &_img {
