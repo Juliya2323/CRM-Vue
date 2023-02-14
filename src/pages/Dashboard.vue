@@ -76,7 +76,6 @@ const main = ref(Main)
 
       &:hover {
         background-color: rgba(38, 192, 226, 20%);
-        border: 0.4px solid var(--medium)
       }
 
       &::after {

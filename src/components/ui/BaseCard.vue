@@ -9,37 +9,33 @@
 
 <style scoped lang="scss">
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 18px 26px;
+  gap: 18px;
+  background-color: var(--white);
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  color: var(--dark);
+
+  &_header {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    padding: 22px 26px;
-    gap: 22px;
-    background-color: var(--white);
-    border-radius: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    height: 100%;
-    color: var(--dark);
+    align-items: center;
 
-    &_header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        
-
-        &_title {
-            margin: 0;
-        font-weight: 700;
-        font-size: 18px;
-        }
-
-        &_img {
-            width: 18px;
-            height: 18px;
-        }
+    &_title {
+      margin: 0;
+      font-weight: 700;
+      font-size: 18px;
     }
 
-
-            
+    &_img {
+      width: 18px;
+      height: 18px;
+    }
+  }
 }
 </style>
