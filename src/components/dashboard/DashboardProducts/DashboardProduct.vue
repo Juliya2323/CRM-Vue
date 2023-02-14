@@ -1,55 +1,53 @@
 <template lang="pug">
 .product 
-    img.product_img(:src="img")
+    img.product_img(:src="img" alt="product")
     .product_info 
         h2.product_title {{ name }}
-        img.product_rating(:src="rating", alt="")
+        img.product_rating(:src="rating", alt="stars")
         h3.product_cost ${{ cost }}
 </template>
 
 <script setup>
-
 const props = defineProps(["img", "name", "rating", "cost"]);
-
 </script>
 
 <style scoped lang="scss">
 .product {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1.5px solid #fafafb;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #fafafb;
+  }
+
+  &_img {
+    width: 96px;
+    height: 96px;
+    border-radius: 10px;
+  }
+
+  &_info {
     display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-    padding: 14px 0;
-    border-bottom: 1.5px solid #FAFAFB;
-    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 7px;
+  }
 
-    &:hover {
-        background-color: #FAFAFB;
-    }
+  &_title {
+    margin: 0;
+    font-weight: 400;
+    font-size: 15px;
+  }
 
-    &_img {
-        width: 96px;
-        height: 96px;
-        border-radius: 10px;
-    }
-
-    &_info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 7px;
-    }
-
-    &_title {
-        margin:0;
-        font-weight: 400;
-        font-size: 15px;
-    }
-
-    &_cost {
-        margin: 0;
-        font-weight: 700;
-        font-size: 15px;
-    }
+  &_cost {
+    margin: 0;
+    font-weight: 700;
+    font-size: 15px;
+  }
 }
 </style>

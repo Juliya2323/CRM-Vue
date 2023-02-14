@@ -9,23 +9,21 @@ base-card
 </template>
 
 <script setup>
-import DashboardProduct from './DashboardProduct.vue';
+import DashboardProduct from "./DashboardProduct.vue";
 import { useDashboardStore } from "../../../store/dashboard.js";
 
-
 const dashboard = useDashboardStore();
-        
 </script>
 
 <style scoped lang="scss">
 .products_list {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 
-    &_item {
-        width: 100%;
-    }
+  &_item {
+    width: 100%;
+  }
 }
 </style>

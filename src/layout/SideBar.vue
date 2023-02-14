@@ -22,7 +22,7 @@
       base-button.upgrade_button Upgrade Now
     .sidebar_account 
       .account_info 
-        img.account_info_img(src="../assets/images/account.png", alt="photo")
+        img.account_info_img(src="../assets/images/account.png" alt="photo")
         .account_info_text 
           h3.info_text_name Easin Arafat
           h3.info_text_position Free Account

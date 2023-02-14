@@ -11,7 +11,7 @@
                 dashboard-tab(:icon="tab.icon" :amount="tab.amount" :title="tab.title" :id="tab.id")
     section.dashboard_section
         .dashboard_item_left 
-            img.dashboard_img(:src="main")
+            img.dashboard_img(:src="main" alt="main")
         .dashboard_item_right
             dashboard-diagram
     section.dashboard_section
@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 import { useDashboardStore } from "../store/dashboard.js";
 import DashboardTab from "../components/dashboard/DashboardTab/index.vue";
 import DashboardDiagram from "../components/dashboard/DashboardDiagram/index.vue";
@@ -31,7 +31,7 @@ import DashboardProducts from "../components/dashboard/DashboardProducts/index.v
 import Main from "../assets/icons/main.svg";
 
 const dashboard = useDashboardStore();
-const main = ref(Main)
+const main = ref(Main);
 </script>
 
 <style scoped lang="scss">
@@ -79,7 +79,7 @@ const main = ref(Main)
       }
 
       &::after {
-        content: url('../assets/icons/arrow2.svg');
+        content: url("../assets/icons/arrow2.svg");
         position: absolute;
         right: 14px;
         top: 9px;

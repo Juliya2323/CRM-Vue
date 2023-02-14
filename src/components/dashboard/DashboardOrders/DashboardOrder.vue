@@ -1,12 +1,12 @@
 <template lang="pug">
 .order 
-    .order_number {{ no }}
-    .order_product 
-        img.order_product_img(:src="img")
-        .order_product_name {{ name }}
-    .order_price {{ price }}$
-    .order_total {{ total }}
-    .order_amount ${{ amount }}
+    td.order_number {{ no }}
+    td.order_product 
+        img.order_product_img(:src="img" alt="order_img")
+        span.order_product_name {{ name }}
+    td.order_price {{ price }}$
+    td.order_total {{ total }}
+    td.order_amount ${{ amount }}
 </template>
 
 <script setup>

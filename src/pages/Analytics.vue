@@ -6,19 +6,19 @@
             .analytics_search 
                 input.analytics_search_input(type="text" placeholder="Search")
             base-button.analytics_button Add New
-    section.analytics_table 
-        .analytics_table_items
-            .item_checkbox
+    table.analytics_table 
+        tr.analytics_table_items
+            th.item_checkbox
                 input(type="checkbox")
-            .item_id Id
-            .item_name Name
-            .item_email Email
-            .item_date Date
-            .item_status Status
-            .item_delete
+            th.item_id Id
+            th.item_name Name
+            th.item_email Email
+            th.item_date Date
+            th.item_status Status
+            th.item_delete
                 img.item_delete_img(src="../assets/icons/delete.svg")
-        ul.analytics_list 
-            li.analytics_list_item(v-for="worker in analytics.coworkers" :key="worker.id")
+        .analytics_list 
+            tr.analytics_list_item(v-for="worker in analytics.coworkers" :key="worker.id")
                 analytics-item(:id="worker.id" :img="worker.img" :name="worker.name" :email="worker.email" :date="worker.date" :status="worker.status")
 </template>
 
@@ -27,7 +27,6 @@ import { useAnalyticsStore } from "../store/analytics.js";
 import AnalyticsItem from "../components/analytics/AnalyticsItem/index.vue";
 
 const analytics = useAnalyticsStore();
-    
 </script>
 
 <style scoped lang="scss">
@@ -105,9 +104,9 @@ const analytics = useAnalyticsStore();
 
   &_table {
     width: 100%;
-    height: 100%;
     font-weight: 400;
     font-size: 12px;
+    
 
     &_items {
       display: flex;
@@ -119,11 +118,17 @@ const analytics = useAnalyticsStore();
     .item_checkbox {
       width: 6%;
       cursor: pointer;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
     }
     .item_id {
       width: 10%;
       position: relative;
       cursor: pointer;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
 
       &::after {
         content: url("../assets/icons/arrow.svg");
@@ -135,6 +140,9 @@ const analytics = useAnalyticsStore();
       width: 18%;
       position: relative;
       cursor: pointer;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
 
       &::after {
         content: url("../assets/icons/arrow.svg");
@@ -146,6 +154,9 @@ const analytics = useAnalyticsStore();
       width: 24%;
       position: relative;
       cursor: pointer;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
 
       &::after {
         content: url("../assets/icons/arrow.svg");
@@ -157,6 +168,9 @@ const analytics = useAnalyticsStore();
       width: 15%;
       position: relative;
       cursor: pointer;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
 
       &::after {
         content: url("../assets/icons/arrow.svg");
@@ -168,6 +182,9 @@ const analytics = useAnalyticsStore();
       width: 20%;
       position: relative;
       cursor: pointer;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
 
       &::after {
         content: url("../assets/icons/arrow.svg");
@@ -190,6 +207,8 @@ const analytics = useAnalyticsStore();
     display: flex;
     flex-direction: column;
     gap: 10px;
+    height: 80vh;
+    overflow-y: scroll;
   }
 }
 </style>

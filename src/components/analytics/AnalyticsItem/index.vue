@@ -1,18 +1,19 @@
 <template lang="pug">
 .coworker
-    .coworker_checkbox
+    td.coworker_checkbox
         input(type="checkbox")
-    .coworker_id {{ id }}
-    .coworker_person 
-        img.person_photo(:src="img")
+    td.coworker_id {{ id }}
+    td.coworker_person 
+        img.person_photo(:src="img" alt="person_photo")
         p.person_text {{ name }}
-    .coworker_email {{ email }}
-    .coworker_date {{ date }}
-    .coworker_status 
+    td.coworker_email 
+        a {{ email }}
+    td.coworker_date {{ date }}
+    td.coworker_status 
         .status_mode(:class="{complete: status==='Complete', pending: status==='Pending', cancel: status==='Cancel'}") {{ status }}
-    .coworker_edit
-        img.status_img(src="../../../assets/icons/star.svg")
-        img.more_img(src="../../../assets/icons/more_purple.svg")
+    td.coworker_edit
+        img.status_img(src="../../../assets/icons/star.svg" alt="rating")
+        img.more_img(src="../../../assets/icons/more_purple.svg" alt="edit")
 </template>
 
 <script setup>
@@ -102,19 +103,16 @@ const props = defineProps(["id", "img", "name", "email", "date", "status"]);
     .complete {
         background-color: rgba(58, 151, 76, 20%);
         color: #3A974C;
-        width: 162px;
     }
 
     .pending {
         background-color: rgba(242, 147, 57, 20%);
         color: #F29339;
-        width: 162px;
     } 
      
     .cancel {
         background-color: rgba(209, 26, 42, 20%);
         color: #D11A2A;
-        width: 162px;
     }
 }
 </style>

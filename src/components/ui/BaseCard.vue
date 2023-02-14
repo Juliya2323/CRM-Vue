@@ -3,7 +3,8 @@
     header.card_header(v-if="$slots.header")
         h2.card_header_title
             slot(name="header")
-        img(class="card_header_img" src="../../assets/icons/more.svg" alt="more") 
+        button.card_button
+          img(class="card_header_img" src="../../assets/icons/more.svg" alt="more") 
     slot
 </template>
 
@@ -36,6 +37,15 @@
       width: 18px;
       height: 18px;
     }
+  }
+
+  &_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
   }
 }
 </style>

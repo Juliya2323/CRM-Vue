@@ -3,14 +3,14 @@ base-card
     template(v-slot:header)
         span Recent Orders
     template(v-slot:default)
-        ul.orders_list 
-            .orders_list_header 
-                .header_item_num Tracking No
-                .header_item_prod Product Name
-                .header_item_price Price
-                .header_item_total Total Order
-                .header_item_amount Total Amount
-            li.orders_list_item(v-for="order in dashboard.orders" :key="order.id")          
+        table.orders_list 
+            tr.orders_list_header 
+                th.header_item_num Tracking No
+                th.header_item_prod Product Name
+                th.header_item_price Price
+                th.header_item_total Total Order
+                th.header_item_amount Total Amount
+            tr.orders_list_item(v-for="order in dashboard.orders" :key="order.id")    
                 dashboard-order(:no="order.id", :img="order.img", :name="order.name", :price="order.price", :total="order.total", :amount="order.amount")
 </template>
 
@@ -19,7 +19,6 @@ import DashboardOrder from "../DashboardOrders/DashboardOrder.vue";
 import { useDashboardStore } from "../../../store/dashboard.js";
 
 const dashboard = useDashboardStore();
-    
 </script>
 
 <style scoped lang="scss">
@@ -35,56 +34,59 @@ const dashboard = useDashboardStore();
     display: flex;
     justify-content: space-between;
     padding: 10px 12px;
-    border-bottom: 1.5px solid #FAFAFB;
+    border-bottom: 1.5px solid #fafafb;
 
     .header_item_num {
-        width: 19%;
-        position: relative;
+      width: 19%;
+      position: relative;
+      text-align: left;
 
-        &::after {
-            content:url('../../../assets/icons/arrow.svg');
-            position: absolute;
-            top: -1px;
-            left: 98px;
-        }
+      &::after {
+        content: url("../../../assets/icons/arrow.svg");
+        position: absolute;
+        top: -1px;
+        left: 98px;
+      }
     }
     .header_item_prod {
-        width: 29%;
-        position: relative;
+      width: 29%;
+      position: relative;
+      text-align: left;
 
-        &::after {
-            content:url('../../../assets/icons/arrow.svg');
-            position: absolute;
-            top: -1px;
-            left: 116px;
-        }
+      &::after {
+        content: url("../../../assets/icons/arrow.svg");
+        position: absolute;
+        top: -1px;
+        left: 116px;
+      }
     }
     .header_item_price {
-        width: 16%;
-        position: relative;
+      width: 16%;
+      position: relative;
+      text-align: left;
 
-        &::after {
-            content:url('../../../assets/icons/arrow.svg');
-            position: absolute;
-            top: -1px;
-            left: 48px;
-        }
+      &::after {
+        content: url("../../../assets/icons/arrow.svg");
+        position: absolute;
+        top: -1px;
+        left: 48px;
+      }
     }
     .header_item_total {
-        width: 21%;
-        position: relative;
-        text-align: center;
+      width: 21%;
+      position: relative;
+      text-align: center;
 
-        &::after {
-            content:url('../../../assets/icons/arrow.svg');
-            position: absolute;
-            top: -1px;
-            left: 134px;
-        }
+      &::after {
+        content: url("../../../assets/icons/arrow.svg");
+        position: absolute;
+        top: -1px;
+        left: 134px;
+      }
     }
     .header_item_amount {
-        width: 15%;
-        text-align: right;
+      width: 15%;
+      text-align: right;
     }
 
     .orders_list_header {
@@ -95,7 +97,7 @@ const dashboard = useDashboardStore();
   }
 
   &_item {
-      width: 100%;
+    width: 100%;
   }
 }
 </style>

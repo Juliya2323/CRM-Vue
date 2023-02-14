@@ -1,16 +1,14 @@
 <template lang="pug">
 .tab(:class="id")
   .tab_img
-     img.tab_img_icon(:src="icon")
+     img.tab_img_icon(:src="icon" alt="icon")
   .tab_description 
      h3.tab_description_amount {{ amount }}+
      h4.tab_description_title {{ title }}  
 </template>
 
 <script setup>
-
 const props = defineProps(["id", "icon", "amount", "title"]);
-
 </script>
 
 <style scoped lang="scss">
@@ -45,14 +43,14 @@ const props = defineProps(["id", "icon", "amount", "title"]);
       margin: 0;
       font-weight: 800;
       font-size: 22px;
-      color:var(--dark);
+      color: var(--dark);
     }
 
     &_title {
       margin: 0;
       font-weight: 400;
       font-size: 14px;
-      color:var(--medium);
+      color: var(--medium);
     }
   }
 }
