@@ -7,7 +7,7 @@
         img.person_photo(:src="img" alt="person_photo")
         p.person_text {{ name }}
     td.coworker_email 
-        a {{ email }}
+        a.coworker_email_link(:href="'mailto:' + email") {{ email }}
     td.coworker_date {{ date }}
     td.coworker_state 
         .status_mode(:class="{complete: status==='Complete', pending: status==='Pending', cancel: status==='Cancel'}") {{ status }}
@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import { useAnalyticsStore } from "../../../store/analytics.js";
 
 const analytics = useAnalyticsStore();
@@ -50,6 +50,7 @@ function switchStatus() {
     font-size: 14px;
     box-sizing: border-box;
     transition: all 0.3s ease-out;
+    color: var(--dark);
 
     &:hover {
         border-bottom: 2px solid rgb(103, 103, 103, 15%);
@@ -91,6 +92,11 @@ function switchStatus() {
         box-sizing: border-box;
         position: relative;
         cursor: pointer;
+
+        &_link {
+            text-decoration: none;
+            color: var(--dark);
+        }
 
         &::before {
             content: url('../../../assets/icons/email.svg');

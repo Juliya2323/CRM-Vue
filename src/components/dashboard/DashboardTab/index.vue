@@ -25,6 +25,11 @@ const props = defineProps(["id", "icon", "amount", "title"]);
   width: 268px;
   position: relative;
   cursor: pointer;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+      transform: scale(1.1);
+    }
 
   &_img {
     display: flex;

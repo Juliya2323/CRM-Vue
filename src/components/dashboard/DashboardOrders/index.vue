@@ -40,6 +40,7 @@ const dashboard = useDashboardStore();
       width: 19%;
       position: relative;
       text-align: left;
+      cursor: pointer;
 
       &::after {
         content: url("../../../assets/icons/arrow.svg");
@@ -52,6 +53,7 @@ const dashboard = useDashboardStore();
       width: 29%;
       position: relative;
       text-align: left;
+      cursor: pointer;
 
       &::after {
         content: url("../../../assets/icons/arrow.svg");
@@ -64,6 +66,7 @@ const dashboard = useDashboardStore();
       width: 16%;
       position: relative;
       text-align: left;
+      cursor: pointer;
 
       &::after {
         content: url("../../../assets/icons/arrow.svg");
@@ -76,6 +79,7 @@ const dashboard = useDashboardStore();
       width: 21%;
       position: relative;
       text-align: center;
+      cursor: pointer;
 
       &::after {
         content: url("../../../assets/icons/arrow.svg");
