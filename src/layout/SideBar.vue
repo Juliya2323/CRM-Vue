@@ -31,14 +31,13 @@
 
 <script setup>
 import { ref } from "vue";
-import { useRouter, useRoute } from 'vue-router';
+import { useRouter, useRoute } from "vue-router";
 import Logo from "../assets/icons/logo.svg";
 const router = useRouter();
 const route = useRoute();
 
-
 function onMain() {
-  router.push('/dashboard');
+  router.push("/dashboard");
   console.log(route.name);
 }
 </script>
@@ -90,8 +89,6 @@ function onMain() {
       opacity: 0.4;
       transition: all 0.3s ease-out;
 
-      
-
       &:hover {
         path {
           fill: var(--purple);
@@ -102,10 +99,8 @@ function onMain() {
           opacity: 1;
         }
 
-        
-          color: var(--purple);
-          opacity: 1;
-        
+        color: var(--purple);
+        opacity: 1;
       }
 
       &_svg {

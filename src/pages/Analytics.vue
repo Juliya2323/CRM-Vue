@@ -6,27 +6,30 @@
             .analytics_search 
                 input.analytics_search_input(type="text" placeholder="Search")
             base-button.analytics_button Add New
-    table.analytics_table 
-        tr.analytics_table_items
-            th.item_checkbox
-                input(type="checkbox")
-            th.item_id Id
-            th.item_name Name
-            th.item_email Email
-            th.item_date Date
-            th.item_status Status
-            th.item_delete
-                img.item_delete_img(src="../assets/icons/delete.svg")
-        .analytics_list 
-            tr.analytics_list_item(v-for="worker in analytics.coworkers" :key="worker.id")
-                analytics-item(:id="worker.id" :img="worker.img" :name="worker.name" :email="worker.email" :date="worker.date" :status="worker.status")
+    form        
+      table.analytics_table 
+          tr.analytics_table_items
+              th.item_checkbox
+                  //input(type="checkbox")
+              th.item_id Id
+              th.item_name Name
+              th.item_email Email
+              th.item_date Date
+              th.item_status Status
+              th.item_delete(@click="analytics.deleteItem(analytics.selectedItem)")
+                  img.item_delete_img(src="../assets/icons/delete.svg")
+          .analytics_list 
+              tr.analytics_list_item(v-for="worker in analytics.coworkers" :key="worker.id")
+                  analytics-item(:id="worker.id" :img="worker.img" :name="worker.name" :email="worker.email" :date="worker.date" :status="worker.status")
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import { useAnalyticsStore } from "../store/analytics.js";
 import AnalyticsItem from "../components/analytics/AnalyticsItem/index.vue";
 
 const analytics = useAnalyticsStore();
+
 </script>
 
 <style scoped lang="scss">
@@ -112,12 +115,11 @@ const analytics = useAnalyticsStore();
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 25px;
+      padding: 10px 25px;
     }
 
     .item_checkbox {
       width: 6%;
-      cursor: pointer;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -153,16 +155,9 @@ const analytics = useAnalyticsStore();
     .item_email {
       width: 24%;
       position: relative;
-      cursor: pointer;
       display: flex;
       justify-content: flex-start;
       align-items: center;
-
-      &::after {
-        content: url("../assets/icons/arrow.svg");
-        position: absolute;
-        left: 48px;
-      }
     }
     .item_date {
       width: 15%;
@@ -207,8 +202,6 @@ const analytics = useAnalyticsStore();
     display: flex;
     flex-direction: column;
     gap: 10px;
-    height: 80vh;
-    overflow-y: scroll;
   }
 }
 </style>

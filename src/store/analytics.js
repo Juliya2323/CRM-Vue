@@ -76,11 +76,16 @@ export const useAnalyticsStore = defineStore("analytics", {
                     date: '12 Dec, 2020',
                     status: 'Pending'
                 }
-            ]
+            ],
+            selectedItem: '',
         }
     },
     actions: {
-      
+      deleteItem(id) {
+        const itemIndex = this.coworkers.findIndex(item => item.id === id);
+        this.coworkers.splice(itemIndex, 1);
+        console.log(itemIndex)
+      }
     },
 })
       
