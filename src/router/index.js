@@ -6,8 +6,8 @@ export const router = createRouter({
     history: createWebHistory(),
     routes: [
         { path: '/', redirect: '/dashboard' },
-        { path: '/dashboard', component: Dashboard },
-        { path: '/analytics', component: Analytics }
+        { path: '/dashboard', component: Dashboard, name: 'dashboard' },
+        { path: '/analytics', component: Analytics, name: 'analytics' }
     ]
 });
 
