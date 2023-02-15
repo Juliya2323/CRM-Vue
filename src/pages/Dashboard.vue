@@ -1,10 +1,10 @@
 <template lang="pug">
+dashboard-calendar(v-if="dashboard.calendarIsOpen")
 .dashboard
     header.dashboard_header 
       h2.dashboard_title Dashboard
       .dashboard_calendar
-        button.dashboard_calendar_btn 10-06-2021
-        button.dashboard_calendar_btn 10-10-2021
+        button.dashboard_calendar_btn(@click="switchCalendar") {{ dashboard.date }}
     section.dashboard_tabs
         ul.dashboard_list
             li(class=".dashboard_list_item" v-for = "tab in dashboard.tabs" :key = "tab.key") 
@@ -28,10 +28,21 @@ import DashboardTab from "../components/dashboard/DashboardTab/index.vue";
 import DashboardDiagram from "../components/dashboard/DashboardDiagram/index.vue";
 import DashboardOrders from "../components/dashboard/DashboardOrders/index.vue";
 import DashboardProducts from "../components/dashboard/DashboardProducts/index.vue";
+import DashboardCalendar from "../components/dashboard/DashboardCalendar/index.vue";
 import Main from "../assets/icons/main.svg";
 
 const dashboard = useDashboardStore();
 const main = ref(Main);
+
+const calendarIsOpen = ref(false);
+
+function switchCalendar() {
+  dashboard.calendarIsOpen = !dashboard.calendarIsOpen;
+}
+
+/* function closeCalendar() {
+  calendarIsOpen.value = false;
+} */
 </script>
 
 <style scoped lang="scss">

@@ -79,7 +79,10 @@ export const useDashboardStore = defineStore("dashboard", {
             rating: '../../../src/assets/icons/five.svg',
             cost: 987
           },
-        ]
+        ],
+        calendarIsOpen: false,
+        date: new Date().toLocaleDateString(),
+        day: new Date().getDate()
       };
     },
     actions: {
