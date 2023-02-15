@@ -10,15 +10,19 @@ base-card
                 th.header_item_price Price
                 th.header_item_total Total Order
                 th.header_item_amount Total Amount
-            tr.orders_list_item(v-for="order in dashboard.orders" :key="order.id")    
+            tr.orders_list_item(v-for="order in dashboard.orders" :key="order.id" @click="dashboard.selectOrder(order.id)" )    
                 dashboard-order(:no="order.id", :img="order.img", :name="order.name", :price="order.price", :total="order.total", :amount="order.amount")
 </template>
 
 <script setup>
+
 import DashboardOrder from "../DashboardOrders/DashboardOrder.vue";
 import { useDashboardStore } from "../../../store/dashboard.js";
 
 const dashboard = useDashboardStore();
+
+
+
 </script>
 
 <style scoped lang="scss">

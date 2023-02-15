@@ -11,7 +11,6 @@
 
 <script setup>
 const props = defineProps(["no", "img", "name", "price", "total", "amount"]);
-
 </script>
 
 <style scoped lang="scss">
@@ -26,7 +25,7 @@ const props = defineProps(["no", "img", "name", "price", "total", "amount"]);
   cursor: pointer;
 
   &:hover {
-    background-color: #FAFAFB;
+    background-color: #fafafb;
   }
 
   &_number {
@@ -40,6 +39,11 @@ const props = defineProps(["no", "img", "name", "price", "total", "amount"]);
     gap: 10px;
     justify-content: flex-start;
     align-items: center;
+
+    &_img {
+      width: 30px;
+      height: 30px;
+    }
   }
 
   &_price {
@@ -58,7 +62,7 @@ const props = defineProps(["no", "img", "name", "price", "total", "amount"]);
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       width: 61px;
       height: 38px;

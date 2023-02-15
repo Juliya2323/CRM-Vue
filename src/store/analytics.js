@@ -84,7 +84,6 @@ export const useAnalyticsStore = defineStore("analytics", {
       deleteItem(id) {
         const itemIndex = this.coworkers.findIndex(item => item.id === id);
         this.coworkers.splice(itemIndex, 1);
-        console.log(itemIndex)
       }
     },
 })

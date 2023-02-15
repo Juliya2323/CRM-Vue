@@ -1,4 +1,5 @@
 <template lang="pug">
+base-spinner(v-if="isLoading")
 .sidebar
   nav.nav
     .nav_logo(@click="onMain")
@@ -19,7 +20,7 @@
   .sidebar_wrapper 
     .sidebar_upgrade 
       img.upgrade_bg(src='../assets/images/manage_bg.jpg')
-      base-button.upgrade_button Upgrade Now
+      base-button.upgrade_button(@click='onMain') Go to main
     .sidebar_account 
       .account_info 
         img.account_info_img(src="../assets/images/account.png" alt="photo")
@@ -35,11 +36,12 @@ import { useRouter, useRoute } from "vue-router";
 import Logo from "../assets/icons/logo.svg";
 const router = useRouter();
 const route = useRoute();
+const isLoading = ref(false);
 
 function onMain() {
   router.push("/dashboard");
-  console.log(route.name);
 }
+
 </script>
 
 <style scoped lang="scss">

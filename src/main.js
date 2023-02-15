@@ -7,12 +7,14 @@ import App from './App.vue';
 import BaseButton from './components/ui/BaseButton.vue';
 import BaseCard from './components/ui/BaseCard.vue';
 import BaseLoader from './components/ui/BaseLoader.vue';
+import BaseSpinner from './components/ui/BaseSpinner.vue';
 
 const app = createApp(App);
 const pinia = createPinia();
 app.component('base-button', BaseButton);
 app.component('base-card', BaseCard);
 app.component('base-loader', BaseLoader);
+app.component('base-spinner', BaseSpinner);
 app.use(router);
 app.use(pinia);
 app.mount('#app');

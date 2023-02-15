@@ -1,5 +1,6 @@
 <template lang="pug">
 dashboard-calendar(v-if="dashboard.calendarIsOpen")
+order-details(v-if="dashboard.orderIsChecked")
 .dashboard
     header.dashboard_header 
       h2.dashboard_title Dashboard
@@ -29,6 +30,7 @@ import DashboardDiagram from "../components/dashboard/DashboardDiagram/index.vue
 import DashboardOrders from "../components/dashboard/DashboardOrders/index.vue";
 import DashboardProducts from "../components/dashboard/DashboardProducts/index.vue";
 import DashboardCalendar from "../components/dashboard/DashboardCalendar/index.vue";
+import OrderDetails from '../components/dashboard/DashboardOrders/OrderDetails.vue';
 import Main from "../assets/icons/main.svg";
 
 const dashboard = useDashboardStore();
@@ -39,10 +41,6 @@ const calendarIsOpen = ref(false);
 function switchCalendar() {
   dashboard.calendarIsOpen = !dashboard.calendarIsOpen;
 }
-
-/* function closeCalendar() {
-  calendarIsOpen.value = false;
-} */
 </script>
 
 <style scoped lang="scss">
@@ -54,6 +52,7 @@ function switchCalendar() {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
 
   &_header {
     display: flex;

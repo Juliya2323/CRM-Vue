@@ -31,36 +31,44 @@ export const useDashboardStore = defineStore("dashboard", {
         ],
         orders: [
           {
-            id: '#876364',
-            img: "../../../src/assets/images/order_1.png",
-            name: 'Camera Lens',
-            price: '178',
-            total: '325',
-            amount: '1,46,660'
+            id: '4197787B',
+            img: "../../../src/assets/images/order_1.jpg",
+            name: 'Black Portrait Dress',
+            price: '450',
+            total: '1325',
+            amount: '1,46,660',
+            details: ['75% polyester', '25% cotton', 'Dry clean only', 'Made in China', 'Model is wearing size US2', 'Model is 175cm', 'bust 84cm, waist 60cm, hips 90cm'],
+            designed: 'Staud'
           },
           {
-            id: '#876368',
-            img: "../../../src/assets/images/order_2.png",
-            name: 'Black Sleep Dress',
-            price: '14',
-            total: '53',
-            amount: '46,660'
+            id: 'LSK05',
+            img: "../../../src/assets/images/order_2.jpg",
+            name: 'Bordeaux Pencil Skirt',
+            price: '273',
+            total: '953',
+            amount: '46,660',
+            details: ['50% polyester', '50% polyurethane', 'Lining: 100% polyester', 'Dry clean only', 'Made in Georgia', 'Model is wearing size S', 'Model is 175cm', 'bust 84cm, waist 60cm, hips 90cm'],
+            designed: 'Aleksandre Akhalkatsishvili'
           },
           {
-            id: '#876412',
-            img: "../../../src/assets/images/order_3.png",
-            name: 'Argan Oil',
-            price: '21',
-            total: '78',
-            amount: '3,46,676'
+            id: 'STINTINB',
+            img: "../../../src/assets/images/order_3.jpg",
+            name: 'Black Collar Sweater',
+            price: '234',
+            total: '758',
+            amount: '3,46,676',
+            details: ['90% wool', '10% cashmere', 'Dry clean only', 'Made in China', 'Model is wearing size S', 'Model is 175cm', 'bust 84cm, waist 60cm, hips 90cm'],
+            designed: 'Loulou Studio'
           },
           {
-            id: '#876621',
-            img: "../../../src/assets/images/order_4.png",
-            name: 'EAU DE Parfum',
-            price: '32',
-            total: '98',
-            amount: '3,46,981'
+            id: '711DR108',
+            img: "../../../src/assets/images/order_4.jpg",
+            name: 'Army Oversized Blazer',
+            price: '500',
+            total: '1598',
+            amount: '3,46,981',
+            details: ['60% Viscose', '38% Virgin Wool', '2% Elastane', 'Dry clean only', 'Made in Georgia', 'Model is wearing size S', 'Model is 175cm', 'bust 84cm, waist 60cm, hips 90cm'],
+            designed: '0711'
           }
 
         ],
@@ -82,10 +90,18 @@ export const useDashboardStore = defineStore("dashboard", {
         ],
         calendarIsOpen: false,
         date: new Date().toLocaleDateString(),
-        day: new Date().getDate()
+        day: new Date().getDate(),
+        orderIsChecked: false,
+        orderIndex: '',
+        checkedOrder: null,
       };
     },
     actions: {
-      
+       selectOrder(id) {
+        this.orderIsChecked = true;
+        const index = this.orders.findIndex(item => item.id === id);
+        this.orderIndex = index;
+        this.checkedOrder = this.orders[index];
+    }
     },
   });
