@@ -109,7 +109,7 @@ export const useDashboardStore = defineStore("dashboard", {
         {
           id: "1",
           img: "../../../src/assets/images/shoes.jpg",
-          name: "THEBE MAGUGU SHOES",
+          name: "Thebe Magugu Shoes",
           rating: "../../../src/assets/icons/four.svg",
           cost: 87,
           details: [

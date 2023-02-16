@@ -40,7 +40,7 @@ function closeProduct() {
   z-index: 10;
   font-family: "Nunito";
   background-color: var(--white);
-  width: 600px;
+  width: 500px;
   height: 600px;
   border-radius: 15px;
   padding: 35px;
