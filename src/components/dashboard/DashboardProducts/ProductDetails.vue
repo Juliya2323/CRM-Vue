@@ -1,19 +1,15 @@
 <template lang="pug">
 .bg
-.order_details
-    h2.details_header {{ dashboard.checkedOrder.name }}
+.product_details
+    h2.details_header {{ dashboard.checkedProduct.name }}
     .details_card 
-      img.details_card_img(:src="dashboard.checkedOrder.img")
-      .details_card_description 
+        img.details_card_img(:src="dashboard.checkedProduct.img")
+        .details_card_description 
         section.description_section 
-          span.details_card_title Details:
-          ul.details_card_list
-            li.details_card_list_item(v-for="detail in dashboard.checkedOrder.details") {{ detail }}
-        section.description_section 
-          span.details_card_title Desinged:
-          p.details_card_text {{ dashboard.checkedOrder.designed }}
-        p.details_card_cost {{ dashboard.checkedOrder.price }}$
-    base-button.details_button(@click="closeOrder()") Close
+            span.details_card_title Details:
+            ul.details_card_list
+                li.details_card_list_item(v-for="detail in dashboard.checkedProduct.details") {{ detail }}
+    base-button.details_button(@click="closeProduct()") Close
 </template>
 
 <script setup>
@@ -21,16 +17,13 @@ import { useDashboardStore } from "../../../store/dashboard.js";
 
 const dashboard = useDashboardStore();
 
-function closeOrder() {
-  dashboard.orderIsChecked = false;
-  dashboard.checkedOrder = '';
+function closeProduct() {
+  dashboard.productIsChecked = false;
+  dashboard.checkedProduct = "";
 }
-
-
 </script>
 
 <style scoped lang="scss">
-
 .bg {
   width: 100%;
   height: 100vh;
@@ -40,7 +33,7 @@ function closeOrder() {
   top: 0;
   right: 0;
 }
-.order_details {
+.product_details {
   position: absolute;
   top: 120px;
   left: 32%;
@@ -48,7 +41,7 @@ function closeOrder() {
   font-family: "Nunito";
   background-color: var(--white);
   width: 600px;
-  height: 500px;
+  height: 600px;
   border-radius: 15px;
   padding: 35px;
   display: flex;
@@ -68,12 +61,14 @@ function closeOrder() {
     height: 440px;
     padding: 10px;
     display: flex;
-    gap: 40px;
+    flex-direction: column;
+    gap: 13px;
     align-items: center;
 
     &_img {
       width: 300px;
       height: 300px;
+      border-radius: 15px;
     }
 
     &_list {
@@ -92,12 +87,6 @@ function closeOrder() {
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
-
-      .description_section {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-      }
     }
 
     &_text {
@@ -111,6 +100,12 @@ function closeOrder() {
 
     &_title {
       font-weight: 700;
+    }
+
+    .description_section  {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
   }
 

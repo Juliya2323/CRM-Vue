@@ -4,7 +4,7 @@ base-card
         span Top Selling Products
     template(v-slot:default)
         ul.products_list 
-            li.products_list_item(v-for="product in dashboard.products" :key="product.id")
+            li.products_list_item(v-for="product in dashboard.products" :key="product.id" @click="dashboard.selectProduct(product.id)")
                dashboard-product(:img="product.img" :name="product.name" :rating="product.rating" :cost="product.cost")
 </template>
 
