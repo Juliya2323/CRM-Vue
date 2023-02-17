@@ -10,16 +10,12 @@
       table.analytics_table 
           tr.analytics_table_items
               th.item_checkbox
-                  //input(type="checkbox")
-              th.item_id Id
-              th.item_name Name
-              th.item_email Email
-              th.item_date Date
-              th.item_status Status
+              th.analytics_table_filters
+                analytics-filter(:title="filter" v-for="(filter, index) in FILTERS" :key="index" @active-filter="analytics.setFiltration({mode: $event, name: filter})")
               th.item_delete(@click="analytics.deleteItem(analytics.selectedItem)")
                   img.item_delete_img(src="../assets/icons/delete.svg")
           .analytics_list 
-              tr.analytics_list_item(v-for="worker in analytics.coworkers" :key="worker.id")
+              tr.analytics_list_item(v-for="worker in analytics.filteredCoworkers" :key="worker.id")
                   analytics-item(:id="worker.id" :img="worker.img" :name="worker.name" :email="worker.email" :date="worker.date" :status="worker.status")
 </template>
 
@@ -27,8 +23,10 @@
 import { ref } from 'vue';
 import { useAnalyticsStore } from "../store/analytics.js";
 import AnalyticsItem from "../components/analytics/AnalyticsItem/index.vue";
+import AnalyticsFilter from '../components/analytics/AnalyticsItem/AnalyticsFilter.vue';
 
 const analytics = useAnalyticsStore();
+const FILTERS = ['Idd', 'Name', 'Date', 'Satus']
 
 </script>
 
@@ -124,68 +122,32 @@ const analytics = useAnalyticsStore();
       justify-content: flex-start;
       align-items: center;
     }
+
+    &_filters {
+      width: 87%;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+    }
     .item_id {
       width: 10%;
-      position: relative;
       cursor: pointer;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-
-      &::after {
-        content: url("../assets/icons/arrow.svg");
-        position: absolute;
-        left: 26px;
-      }
     }
     .item_name {
       width: 18%;
-      position: relative;
-      cursor: pointer;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-
-      &::after {
-        content: url("../assets/icons/arrow.svg");
-        position: absolute;
-        left: 48px;
-      }
+      
     }
     .item_email {
       width: 24%;
-      position: relative;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
+      
     }
     .item_date {
       width: 15%;
-      position: relative;
-      cursor: pointer;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-
-      &::after {
-        content: url("../assets/icons/arrow.svg");
-        position: absolute;
-        left: 43px;
-      }
+      
     }
     .item_status {
       width: 20%;
-      position: relative;
-      cursor: pointer;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-
-      &::after {
-        content: url("../assets/icons/arrow.svg");
-        position: absolute;
-        left: 55px;
-      }
+      
     }
     .item_delete {
       width: 7%;
@@ -204,4 +166,5 @@ const analytics = useAnalyticsStore();
     gap: 10px;
   }
 }
+
 </style>
