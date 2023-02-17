@@ -26,7 +26,7 @@ import AnalyticsItem from "../components/analytics/AnalyticsItem/index.vue";
 import AnalyticsFilter from '../components/analytics/AnalyticsItem/AnalyticsFilter.vue';
 
 const analytics = useAnalyticsStore();
-const FILTERS = ['Idd', 'Name', 'Date', 'Satus']
+const FILTERS = ['Id', 'Name', 'Date', 'Satus']
 
 </script>
 

@@ -15,13 +15,15 @@ const emit = defineEmits(['active-filter'])
 
 function toggleFilter() {
     mode.value = {
-        "up" : "down",
-        "down": null,
+        "down" : null,
+        "up": "down",
         null: "up"
     }[mode.value]
+
+    emit('active-filter', mode.value);
 }
 
-emit('active-filter', mode.value)
+
 
 </script>
 

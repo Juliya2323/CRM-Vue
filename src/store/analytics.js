@@ -93,11 +93,12 @@ export const useAnalyticsStore = defineStore("analytics", {
       const coworkers = Object.assign(this.coworkers);
 
       for (let key in this.filtrations) {
+        
         if (this.filtrations[key]) {
           key === "id" && filterId(coworkers, this.filtrations[key]);
         }
       }
-      return coworkers;
+      return this.coworkers;
     },
   },
   actions: {
