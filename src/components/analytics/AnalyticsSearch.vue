@@ -1,6 +1,6 @@
 <template lang="pug">
-form
-    input.analytics_search_input(type="search" @input="search" :value="searchTerm" placeholder="Filter items")
+.search
+  input.analytics_search_input(type="search" @input="search" :value="searchTerm" placeholder="Enter name...")
 </template>
   
 <script setup>
@@ -32,4 +32,16 @@ function search(event) {
         border: 0.4px solid var(--medium);
       }
     }
+
+    .search {
+    position: relative;
+
+    &::after {
+      content: url("../../assets/icons/search.svg");
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+    }
+  }
 </style>

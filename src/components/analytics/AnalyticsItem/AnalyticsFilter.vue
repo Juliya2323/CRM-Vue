@@ -1,5 +1,5 @@
 <template lang="pug">
-.filter(@click="toggleFilter" :class="`m-${mode}`")
+.filter_item(@click="toggleFilter" :class="`m-${mode}`, `m-${title}`")
     span.filter_title {{ title }}
     .filter.icon 
         img.filter_icon_img(v-if="mode" :src="arrow")
@@ -28,8 +28,8 @@ function toggleFilter() {
 </script>
 
 <style scoped lang="scss">
-.filter {
-    width: 100%;
+.filter_item {
+    //width: 100%;
     display: flex;
     gap: 20px;
     align-items: center;
@@ -45,5 +45,25 @@ function toggleFilter() {
     &.m-down img{
         transform: rotate(360deg);
     }
+}
+
+.m-Id {
+    width: 12%;
+}
+
+.m-Name {
+    width: 20%;
+}
+
+.m-Email {
+    width: 27%;
+}
+
+.m-Date {
+    width: 26%;
+}
+
+.m-Status {
+    width: 20%;
 }
 </style>

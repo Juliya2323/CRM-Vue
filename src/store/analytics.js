@@ -1,6 +1,9 @@
 import { defineStore } from "pinia";
 import { filterId } from '../helpers/Filter.js';
 import { filterName } from '../helpers/Filter.js';
+import { filterEmail } from '../helpers/Filter.js';
+import { filterDate } from '../helpers/Filter.js';
+import { filterStatus } from '../helpers/Filter.js';
 
 export const useAnalyticsStore = defineStore("analytics", {
   state: () => {
@@ -99,9 +102,15 @@ export const useAnalyticsStore = defineStore("analytics", {
           key === "id" && filterId(coworkers, this.filtrations[key]);
 
           key === "name" && filterName(coworkers, this.filtrations[key]);
+
+          key === "email" && filterEmail(coworkers, this.filtrations[key]);
+
+          key === "date" && filterDate(coworkers, this.filtrations[key]);
+
+          key === "status" && filterStatus(coworkers, this.filtrations[key]);
         }
       }
-      return this.coworkers;
+      return coworkers;
     },
   },
   actions: {

@@ -43,4 +43,43 @@ export function filterName(items, flag) {
       return 0;
     });
   }
+}
+
+export function filterEmail(items, flag) {
+
+  console.log('email');
+    
+    if(flag === 'up') {
+      items.sort((a, b) => b.email - a.email);
+    }
+    
+    if(flag === 'down') {
+      items.sort((a, b) => a.email - b.email);
+    }
+}
+
+export function filterDate(items, flag) {
+    
+  console.log('date');
+
+  if(flag === 'up') {
+    items.sort((a, b) => b.date - a.date);
   }
+  
+  if(flag === 'down') {
+    items.sort((a, b) => a.date - b.date);
+  }
+}
+
+export function filterStatus(items, flag) {
+
+  console.log('status');
+    
+  if(flag === 'up') {
+    items.sort((a, b) => b.status - a.status);
+  }
+  
+  if(flag === 'down') {
+    items.sort((a, b) => a.status - b.status);
+  }
+}

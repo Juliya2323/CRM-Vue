@@ -57,7 +57,7 @@ function switchStatus() {
     }
 
     &_checkbox {
-        width: 6%;
+        width: 5%;
         display: flex;
         justify-content: flex-start;
         align-items: center;

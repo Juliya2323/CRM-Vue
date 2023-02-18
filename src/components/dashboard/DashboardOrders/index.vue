@@ -45,52 +45,24 @@ const dashboard = useDashboardStore();
       position: relative;
       text-align: left;
       cursor: pointer;
-
-      &::after {
-        content: url("../../../assets/icons/arrow.svg");
-        position: absolute;
-        top: -1px;
-        left: 98px;
-      }
     }
     .header_item_prod {
       width: 29%;
       position: relative;
       text-align: left;
       cursor: pointer;
-
-      &::after {
-        content: url("../../../assets/icons/arrow.svg");
-        position: absolute;
-        top: -1px;
-        left: 116px;
-      }
     }
     .header_item_price {
       width: 16%;
       position: relative;
       text-align: left;
       cursor: pointer;
-
-      &::after {
-        content: url("../../../assets/icons/arrow.svg");
-        position: absolute;
-        top: -1px;
-        left: 48px;
-      }
     }
     .header_item_total {
       width: 21%;
       position: relative;
       text-align: center;
       cursor: pointer;
-
-      &::after {
-        content: url("../../../assets/icons/arrow.svg");
-        position: absolute;
-        top: -1px;
-        left: 134px;
-      }
     }
     .header_item_amount {
       width: 15%;

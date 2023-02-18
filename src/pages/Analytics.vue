@@ -10,7 +10,11 @@
           tr.analytics_table_items
               th.item_checkbox
               th.analytics_table_filters
-                analytics-filter(:title="filter" v-for="(filter, index) in FILTERS" :key="index" @active-filter="analytics.setFiltration({mode: $event, name: filter})")
+                analytics-filter(
+                  :title="filter" 
+                  v-for="(filter, index) in FILTERS" 
+                  :key="index" 
+                  @active-filter="analytics.setFiltration({mode: $event, name: filter})")
               th.item_delete(@click="analytics.deleteItem(analytics.selectedItem)")
                   img.item_delete_img(src="../assets/icons/delete.svg")
           .analytics_list 
@@ -26,7 +30,7 @@ import AnalyticsFilter from "../components/analytics/AnalyticsItem/AnalyticsFilt
 import AnalyticsSearch from "../components/analytics/AnalyticsSearch.vue";
 
 const analytics = useAnalyticsStore();
-const FILTERS = ["Id", "Name", "Date", "Email", "Satus"];
+const FILTERS = ["Id", "Name", "Email", "Date", "Satus"];
 const enteredSearchTerm = ref("");
 const activeSearchTerm = ref("");
 
@@ -84,18 +88,6 @@ function updateSearch(val) {
     gap: 20px;
   }
 
-  &_search {
-    position: relative;
-
-    &::after {
-      content: url("../assets/icons/search.svg");
-      position: absolute;
-      right: 10px;
-      top: 10px;
-      cursor: pointer;
-    }
-  }
-
   &_button {
     padding: 13px 16px 13px 42px;
     position: relative;
@@ -130,9 +122,8 @@ function updateSearch(val) {
     }
 
     &_filters {
-      width: 87%;
+      width: 100%;
       display: flex;
-      justify-content: space-between;
       cursor: pointer;
     }
     .item_id {
