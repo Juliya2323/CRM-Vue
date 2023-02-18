@@ -3,8 +3,7 @@
     header.analytics_header 
         h1.analytics_title Analytics
         .analytics_wrapper 
-            .analytics_search 
-                input.analytics_search_input(type="text" placeholder="Search")
+            analytics-search(@search="updateSearch" :search-term="enteredSearchTerm")
             base-button.analytics_button Add New
     form        
       table.analytics_table 
@@ -15,19 +14,45 @@
               th.item_delete(@click="analytics.deleteItem(analytics.selectedItem)")
                   img.item_delete_img(src="../assets/icons/delete.svg")
           .analytics_list 
-              tr.analytics_list_item(v-for="worker in analytics.filteredCoworkers" :key="worker.id")
+              tr.analytics_list_item(v-for="worker in availableWorkers" :key="worker.id")
                   analytics-item(:id="worker.id" :img="worker.img" :name="worker.name" :email="worker.email" :date="worker.date" :status="worker.status")
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed, watch } from "vue";
 import { useAnalyticsStore } from "../store/analytics.js";
 import AnalyticsItem from "../components/analytics/AnalyticsItem/index.vue";
-import AnalyticsFilter from '../components/analytics/AnalyticsItem/AnalyticsFilter.vue';
+import AnalyticsFilter from "../components/analytics/AnalyticsItem/AnalyticsFilter.vue";
+import AnalyticsSearch from "../components/analytics/AnalyticsSearch.vue";
 
 const analytics = useAnalyticsStore();
-const FILTERS = ['Id', 'Name', 'Date', 'Satus']
+const FILTERS = ["Id", "Name", "Date", "Email", "Satus"];
+const enteredSearchTerm = ref("");
+const activeSearchTerm = ref("");
 
+const availableWorkers = computed(function () {
+  let coworkers = [];
+  if (activeSearchTerm.value) {
+    coworkers = analytics.filteredCoworkers.filter((worker) =>
+      worker.name.includes(activeSearchTerm.value)
+    );
+  } else if (analytics.filteredCoworkers) {
+    coworkers = analytics.filteredCoworkers;
+  }
+  return coworkers;
+});
+
+watch(enteredSearchTerm, function (newValue) {
+  setTimeout(() => {
+    if (newValue === enteredSearchTerm.value) {
+      activeSearchTerm.value = newValue;
+    }
+  }, 300);
+});
+
+function updateSearch(val) {
+  enteredSearchTerm.value = val;
+}
 </script>
 
 <style scoped lang="scss">
@@ -69,24 +94,6 @@ const FILTERS = ['Id', 'Name', 'Date', 'Satus']
       top: 10px;
       cursor: pointer;
     }
-
-    &_input {
-      width: 230px;
-      border: 0.4px solid transparent;
-      border-radius: 6px;
-      padding: 12px;
-      font-weight: 400;
-      font-size: 12px;
-      cursor: pointer;
-
-      &:hover {
-        border: 0.4px solid var(--medium);
-      }
-
-      &:focus {
-        border: 0.4px solid var(--medium);
-      }
-    }
   }
 
   &_button {
@@ -107,7 +114,6 @@ const FILTERS = ['Id', 'Name', 'Date', 'Satus']
     width: 100%;
     font-weight: 400;
     font-size: 12px;
-    
 
     &_items {
       display: flex;
@@ -135,19 +141,15 @@ const FILTERS = ['Id', 'Name', 'Date', 'Satus']
     }
     .item_name {
       width: 18%;
-      
     }
     .item_email {
       width: 24%;
-      
     }
     .item_date {
       width: 15%;
-      
     }
     .item_status {
       width: 20%;
-      
     }
     .item_delete {
       width: 7%;
@@ -166,5 +168,4 @@ const FILTERS = ['Id', 'Name', 'Date', 'Satus']
     gap: 10px;
   }
 }
-
 </style>

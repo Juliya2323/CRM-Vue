@@ -11,7 +11,7 @@ import arrow from '../../../assets/icons/arrow.svg';
 
 const mode = ref(null);
 const props = defineProps(["title"]);
-const emit = defineEmits(['active-filter'])
+const emit = defineEmits(['active-filter']);
 
 function toggleFilter() {
     mode.value = {
