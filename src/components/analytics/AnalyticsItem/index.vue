@@ -84,6 +84,12 @@ function switchStatus() {
         align-items:center;
         gap: 14px;
         box-sizing: border-box;
+
+        .person_photo {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+        }
     }
 
     &_email {

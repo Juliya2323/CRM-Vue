@@ -10,7 +10,7 @@ export const useAnalyticsStore = defineStore("analytics", {
     return {
       coworkers: [
         {
-          id: "1",
+          id: "264",
           img: "../../../src/assets/images/coworkers/1.png",
           name: "Arrora Gaur",
           email: "arroragaur@gmail.com",
@@ -18,7 +18,7 @@ export const useAnalyticsStore = defineStore("analytics", {
           status: "Complete",
         },
         {
-          id: "2",
+          id: "943",
           img: "../../../src/assets/images/coworkers/2.png",
           name: "James Mullican",
           email: "jamesmullican@gmail.com",
@@ -26,7 +26,7 @@ export const useAnalyticsStore = defineStore("analytics", {
           status: "Pending",
         },
         {
-          id: "5",
+          id: "543",
           img: "../../../src/assets/images/coworkers/3.png",
           name: "Robert Bacins",
           email: "robertbacins@gmail.com",
@@ -34,7 +34,7 @@ export const useAnalyticsStore = defineStore("analytics", {
           status: "Complete",
         },
         {
-          id: "3",
+          id: "379",
           img: "../../../src/assets/images/coworkers/4.png",
           name: "Bethany Jackson",
           email: "bethanyjackson@gmail.com",
@@ -42,7 +42,7 @@ export const useAnalyticsStore = defineStore("analytics", {
           status: "Cancel",
         },
         {
-          id: "6",
+          id: "637",
           img: "../../../src/assets/images/coworkers/5.png",
           name: "Anne Jacob",
           email: "annejacob@gmail.com",
@@ -50,7 +50,7 @@ export const useAnalyticsStore = defineStore("analytics", {
           status: "Complete",
         },
         {
-          id: "4",
+          id: "428",
           img: "../../../src/assets/images/coworkers/6.png",
           name: "Jhon Deo",
           email: "jhondeo32@gmail.com",
@@ -58,7 +58,7 @@ export const useAnalyticsStore = defineStore("analytics", {
           status: "Pending",
         },
         {
-          id: "8",
+          id: "838",
           img: "../../../src/assets/images/coworkers/7.png",
           name: "James Mullican",
           email: "jamesmullican@gmail.com",
@@ -66,21 +66,21 @@ export const useAnalyticsStore = defineStore("analytics", {
           status: "Complete",
         },
         {
-          id: "9",
+          id: "912",
           img: "../../../src/assets/images/coworkers/5.png",
           name: "Anne Jacob",
           email: "annejacob@gmail.com",
           date: "12 Dec, 2020",
           status: "Complete",
         },
-        {
-          id: "7",
+        /* {
+          id: "785",
           img: "../../../src/assets/images/coworkers/6.png",
           name: "Jhon Deo",
           email: "jhondeo32@gmail.com",
           date: "12 Dec, 2020",
           status: "Pending",
-        },
+        }, */
       ],
       selectedItem: "",
       filtrations: {
@@ -120,6 +120,21 @@ export const useAnalyticsStore = defineStore("analytics", {
     },
     setFiltration(filterID) {
         this.filtrations[filterID.name.toLowerCase()] = filterID.mode;
+    },
+    addCoworker(id, img, name, email, date, status) {
+      const newCoworker = {
+          id: id,
+          img: img,
+          name: name,
+          email: email,
+          date: date,
+          status: status
+      }
+
+      this.coworkers.push(newCoworker);
+      console.log('added!')
+
+      
     }
   },
 });

@@ -4,7 +4,7 @@
         h1.analytics_title Analytics
         .analytics_wrapper 
             analytics-search(@search="updateSearch" :search-term="enteredSearchTerm")
-            base-button.analytics_button Add New
+            base-button.analytics_button(@click='toAdd') Add New
     form        
       table.analytics_table 
           tr.analytics_table_items
@@ -26,9 +26,10 @@
 import { ref, computed, watch } from "vue";
 import { useAnalyticsStore } from "../store/analytics.js";
 import AnalyticsItem from "../components/analytics/AnalyticsItem/index.vue";
-import AnalyticsFilter from "../components/analytics/AnalyticsItem/AnalyticsFilter.vue";
+import AnalyticsFilter from "../components/analytics/AnalyticsFilter.vue";
 import AnalyticsSearch from "../components/analytics/AnalyticsSearch.vue";
-
+import { useRouter } from "vue-router";
+const router = useRouter();
 const analytics = useAnalyticsStore();
 const FILTERS = ["Id", "Name", "Email", "Date", "Satus"];
 const enteredSearchTerm = ref("");
@@ -56,6 +57,10 @@ watch(enteredSearchTerm, function (newValue) {
 
 function updateSearch(val) {
   enteredSearchTerm.value = val;
+}
+
+function toAdd() {
+  router.push("/add");
 }
 </script>
 
