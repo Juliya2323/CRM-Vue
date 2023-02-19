@@ -1,9 +1,7 @@
 <template lang="pug">
-base-dialog.add_dialog(v-if="inputIsInvalid")
-      template(v-slot:default)
+.add_dialog(v-if="inputIsInvalid")
         p Unfortunately, at least one input value is invalid.
         p Please check all inputs and make sure you enter at least a few characters into each input field.
-      template(v-slot:actions)
         base-button(@click="confirmError") Okay
 form.add_form(@submit.prevent="submitForm")
     img.add_form_img(:src='logo')
@@ -51,7 +49,7 @@ const inputIsInvalid = ref(false);
 
 function submitForm() {
   if (
-    enteredId.value.trim() === "" ||
+    enteredId.value.trim() === "" || 
     enteredImg.value.trim() === "" ||
     enteredName.value.trim() === "" ||
     enteredEmail.value.trim() === "" ||
@@ -76,7 +74,7 @@ function submitForm() {
 }
 
 function confirmError() {
-  this.main.inputIsInvalid = false;
+  inputIsInvalid.value = false;
 }
 </script>
 
