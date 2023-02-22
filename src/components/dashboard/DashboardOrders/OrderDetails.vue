@@ -1,7 +1,9 @@
 <template lang="pug">
 .bg(@click="closeOrder()")
 .order_details
-    h2.details_header {{ dashboard.checkedOrder.name }}
+    .details_header 
+      .details_header_text {{ dashboard.checkedOrder.name }}
+      base-button.details_button(@click="closeOrder()") 
     .details_card 
       img.details_card_img(:src="dashboard.checkedOrder.img")
       .details_card_description 
@@ -13,7 +15,7 @@
           span.details_card_title Desinged:
           p.details_card_text {{ dashboard.checkedOrder.designed }}
         p.details_card_cost {{ dashboard.checkedOrder.price }}$
-    base-button.details_button(@click="closeOrder()") Close
+    
 </template>
 
 <script setup>
@@ -44,7 +46,7 @@ function closeOrder() {
   position: absolute;
   top: 120px;
   left: 32%;
-  z-index: 10;
+  z-index: 50;
   font-family: "Nunito";
   background-color: var(--white);
   width: 600px;
@@ -60,7 +62,14 @@ function closeOrder() {
   .details_header {
     width: 100%;
     margin: 0;
-    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_text {
+      font-size: 24px;
+      font-weight: 700;
+    }
   }
 
   .details_card {
@@ -115,7 +124,20 @@ function closeOrder() {
   }
 
   .details_button {
-    width: 100%;
+    width: 40px;
+    height: 40px;
+    padding: 2px 3px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::after {
+      content: url(../../../assets/icons/close.svg);
+      position: absolute;
+      top: 5px;
+      left: 4.5px;
+    }
   }
 }
 </style>

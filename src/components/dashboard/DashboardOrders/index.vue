@@ -84,6 +84,10 @@ const dashboard = useDashboardStore();
     align-items: center;
     padding: 12px 0;
     cursor: pointer;
+
+    &:hover {
+      background-color: #fafafb;
+    }
   }
 }
 </style>
