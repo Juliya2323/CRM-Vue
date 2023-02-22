@@ -84,7 +84,8 @@ export const useAnalyticsStore = defineStore("analytics", {
           status: "Pending",
         }, */
       ],
-      selectedItem: "",
+      coworkerIsSelected: false,
+      selectedItem: null,
       filtrations: {
         id: null,
         name: null,
@@ -117,6 +118,8 @@ export const useAnalyticsStore = defineStore("analytics", {
     deleteItem(id) {
       const itemIndex = this.coworkers.findIndex((item) => item.id === id);
       this.coworkers.splice(itemIndex, 1);
+      this.coworkerIsSelected = false;
+      selectedItem = null;
     },
     setFiltration(filterOptions) {
       this.filtrations[filterOptions.name.toLowerCase()] = filterOptions.mode;

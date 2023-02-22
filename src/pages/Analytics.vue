@@ -19,7 +19,7 @@
               th.item_delete(@click="analytics.deleteItem(analytics.selectedItem)")
                   img.item_delete_img(src="../assets/icons/delete.svg")
         tbody.analytics_list 
-              tr.analytics_list_item(v-for="worker in availableWorkers" :key="worker.id")
+              tr.analytics_list_item(v-for="worker in availableWorkers" :key="worker.id" @click="selectItem(worker.id)")
                   analytics-item(:id="worker.id" :img="worker.img" :name="worker.name" :email="worker.email" :date="worker.date" :status="worker.status")
 </template>
 
@@ -56,6 +56,12 @@ watch(enteredSearchTerm, function (newValue) {
     }
   }, 300);
 });
+
+function selectItem(id) {
+  analytics.coworkerIsSelected = !analytics.coworkerIsSelected;
+  analytics.selectedItem = id;
+  console.log(analytics.selectedItem);
+}
 
 function updateSearch(val) {
   enteredSearchTerm.value = val;
@@ -164,6 +170,26 @@ function toAdd() {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    &_item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 11px 25px;
+      background-color: var(--white);
+      border-radius: 8px;
+      border: 2px solid transparent;
+      font-weight: 600;
+      font-size: 14px;
+      box-sizing: border-box;
+      transition: all 0.3s ease-out;
+      color: var(--dark);
+      cursor: pointer;
+
+      &:hover {
+        border-bottom: 2px solid rgb(103, 103, 103, 15%);
+      }
+    }
   }
 }
 </style>
