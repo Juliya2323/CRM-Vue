@@ -1,12 +1,11 @@
 <template lang="pug">
-.order 
-    td.order_number {{ no }}
-    td.order_product 
-        img.order_product_img(:src="img" alt="order_img")
-        span.order_product_name {{ name }}
-    td.order_price {{ price }}$
-    td.order_total {{ total }}
-    td.order_amount ${{ amount }}
+td.order_number {{ no }}
+td.order_product 
+    img.order_product_img(:src="img" alt="order_img")
+    span.order_product_name {{ name }}
+td.order_price {{ price }}$
+td.order_total {{ total }}
+td.order_amount ${{ amount }}
 </template>
 
 <script setup>
@@ -15,13 +14,14 @@ const props = defineProps(["no", "img", "name", "price", "total", "amount"]);
 
 <style scoped lang="scss">
 .order {
+  width: 100%;
   font-weight: 400;
   font-size: 12px;
   text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 12px;
+  padding: 12px 0;
   cursor: pointer;
 
   &:hover {

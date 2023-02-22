@@ -1,3 +1,31 @@
+function sortUp(items, flag, option) {
+  if(flag === 'up') {
+    items.sort((a, b) => {
+      if (a[option].toLowerCase() < b[option].toLowerCase()) {
+        return -1;
+      }
+      if (a[option].toLowerCase() > b[option].toLowerCase()) {
+        return 1;
+      }
+      return 0;
+    });
+  }
+}
+
+function sortDown(items, flag, option) {
+  if(flag === 'down') {
+    items.sort((a, b) => {
+      if (a[option].toLowerCase() > b[option].toLowerCase()) {
+        return -1;
+      }
+      if (a[option].toLowerCase() < b[option].toLowerCase()) {
+        return 1;
+      }
+      return 0;
+    });
+  }
+}
+
 export function filterId(items, flag) {
     
 if(flag === 'up') {
@@ -9,110 +37,30 @@ if(flag === 'down') {
 }
 }
 
-export function filterName(items, flag) {
+export function filterName(items, flag, option = 'name') {
     
-  if(flag === 'up') {
-    items.sort((a, b) => {
-      if (a.name.toLowerCase() < b.name.toLowerCase()) {
-        return -1;
-      }
-      if (a.name.toLowerCase() > b.name.toLowerCase()) {
-        return 1;
-      }
-      return 0;
-    });
-  }
-  
-  if(flag === 'down') {
-    items.sort((a, b) => {
-      if (a.name.toLowerCase() > b.name.toLowerCase()) {
-        return -1;
-      }
-      if (a.name.toLowerCase() < b.name.toLowerCase()) {
-        return 1;
-      }
-      return 0;
-    });
-  }
+  sortUp(items, flag, option);
+
+  sortDown(items, flag, option);
 }
 
-export function filterEmail(items, flag) {
+export function filterEmail(items, flag, option = 'email') {
 
-  if(flag === 'up') {
-    items.sort((a, b) => {
-      if (a.email.toLowerCase() < b.email.toLowerCase()) {
-        return -1;
-      }
-      if (a.email.toLowerCase() > b.email.toLowerCase()) {
-        return 1;
-      }
-      return 0;
-    });
-  }
+  sortUp(items, flag, option);
   
-  if(flag === 'down') {
-    items.sort((a, b) => {
-      if (a.email.toLowerCase() > b.email.toLowerCase()) {
-        return -1;
-      }
-      if (a.email.toLowerCase() < b.email.toLowerCase()) {
-        return 1;
-      }
-      return 0;
-    });
-  }
+  sortDown(items, flag, option);
 }
 
-export function filterDate(items, flag) {
+export function filterDate(items, flag, option = 'date') {
     
-  if(flag === 'up') {
-    items.sort((a, b) => {
-      if (a.date.toLowerCase() < b.date.toLowerCase()) {
-        return -1;
-      }
-      if (a.date.toLowerCase() > b.date.toLowerCase()) {
-        return 1;
-      }
-      return 0;
-    });
-  }
+  sortUp(items, flag, option);
   
-  if(flag === 'down') {
-    items.sort((a, b) => {
-      if (a.date.toLowerCase() > b.date.toLowerCase()) {
-        return -1;
-      }
-      if (a.date.toLowerCase() < b.date.toLowerCase()) {
-        return 1;
-      }
-      return 0;
-    });
-  }
+  sortDown(items, flag, option);
 }
 
-export function filterStatus(items, flag) {
+export function filterStatus(items, flag, option = 'status') {
 
-  if(flag === 'up') {
-    items.sort((a, b) => {
-      if (a.status.toLowerCase() < b.status.toLowerCase()) {
-        return -1;
-      }
-      if (a.status.toLowerCase() > b.status.toLowerCase()) {
-        return 1;
-      }
-      return 0;
-    });
-  }
+  sortUp(items, flag, option);
   
-  if(flag === 'down') {
-    items.sort((a, b) => {
-      if (a.status.toLowerCase() > b.status.toLowerCase()) {
-        return -1;
-      }
-      if (a.status.toLowerCase() < b.status.toLowerCase()) {
-        return 1;
-      }
-      return 0;
-    });
-  }
+  sortDown(items, flag, option);
 }
