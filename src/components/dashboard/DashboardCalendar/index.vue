@@ -1,70 +1,15 @@
 <template lang="pug">
-.bg
-.calendar-container
-  header
-    .close(@click="closeCalendar")
-      img(src="../../../assets/icons/close.svg" alt="close")
-    .day {{ dashboard.day }}
-    .month February
-  table.calendar
-    thead
-      tr
-        td Mon
-        td Tue
-        td Wed
-        td Thu
-        td Fri
-        td Sat
-        td Sun
-    tbody
-      tr
-        td.prev-month 29
-        td.prev-month 30
-        td.prev-month 31
-        td 1
-        td 2
-        td 3
-        td 4
-      tr
-        td 5 
-        td 6 
-        td 7  
-        td 8 
-        td 9 
-        td 10 
-        td 11 
-      tr
-        td 12
-        td 13
-        td 14
-        td 15
-        td 16
-        td 17
-        td.current-day 18
-      tr
-        <td>19</td>
-        <td>20</td>
-        <td>21</td>
-        <td>22</td>
-        <td>23</td>
-        <td>24</td>
-        <td>25</td>
-      tr
-        td 26
-        td 27
-        td 28
-        td 29
-        td 30
-        td 31
-        td.next-month 1
-  .ring-left
-  .ring-right
+.bg(@click="closeCalendar")
+.calendar-container(@click="closeCalendar")
+  VueDatePicker(v-model="date" inline auto-apply)
 </template>
 
 <script setup>
+import {ref} from 'vue';
 import { useDashboardStore } from "../../../store/dashboard.js";
 
 const dashboard = useDashboardStore();
+const date = ref(new Date());
 
 function closeCalendar() {
   dashboard.calendarIsOpen = false;

@@ -37,7 +37,6 @@ import Main from "../assets/icons/main.svg";
 
 const dashboard = useDashboardStore();
 const main = ref(Main);
-
 const calendarIsOpen = ref(false);
 
 function switchCalendar() {
