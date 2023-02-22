@@ -4,7 +4,7 @@ base-card
         span Analytics 
     template(v-slot:default)
         base-loader
-        span.diagram_title Sales Index
+        span.diagram_title Sales Index 4.9
 </template>
 
 <style scoped lang="scss">
