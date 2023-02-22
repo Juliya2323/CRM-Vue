@@ -26,7 +26,6 @@ function toggleFilter() {
 
 <style scoped lang="scss">
 .filter_item {
-  //width: 100%;
   display: flex;
   gap: 20px;
   align-items: center;
@@ -61,6 +60,6 @@ function toggleFilter() {
 }
 
 .m-Status {
-  width: 20%;
+  width: 14%;
 }
 </style>

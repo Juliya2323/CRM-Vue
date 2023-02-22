@@ -18,15 +18,12 @@ form.add_form(@submit.prevent="submitForm")
         label(for="email") Email
         input#email(type="email" v-model="enteredEmail")
     .form-control
-        label(for="date") Date
-        input#date(type="date" v-model="enteredDate")
-    .form-control
         label(for="status") Status?
         select#tsatus(name="status" v-model="enteredStatus")
           option(value="Complete") Complete
           option(value="Pending") Pending
           option(value="Cancel") Cancel
-    base-button(type="submit") Add a coworker
+    base-button.add_button(type="submit") Add a coworker
 </template>
 
 <script setup>
@@ -43,7 +40,6 @@ const enteredId = ref("");
 const enteredImg = ref("");
 const enteredName = ref("");
 const enteredEmail = ref("");
-const enteredDate = ref("");
 const enteredStatus = ref("");
 const inputIsInvalid = ref(false);
 
@@ -54,7 +50,6 @@ function submitForm() {
     enteredName.value.trim() === "" ||
     enteredEmail.value.trim() === "" ||
     !enteredEmail.value.includes("@") ||
-    enteredDate.value.trim() === "" ||
     enteredStatus.value.trim() === ""
   ) {
     inputIsInvalid.value = true;
@@ -66,7 +61,6 @@ function submitForm() {
     enteredImg.value,
     enteredName.value,
     enteredEmail.value,
-    enteredDate.value,
     enteredStatus.value
   );
 

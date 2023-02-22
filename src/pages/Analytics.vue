@@ -7,6 +7,7 @@
             base-button.analytics_button(@click='toAdd') Add New
     form        
       table.analytics_table 
+        thead
           tr.analytics_table_items
               th.item_checkbox
               th.analytics_table_filters
@@ -17,7 +18,7 @@
                   @active-filter="analytics.setFiltration({mode: $event, name: filter})")
               th.item_delete(@click="analytics.deleteItem(analytics.selectedItem)")
                   img.item_delete_img(src="../assets/icons/delete.svg")
-          .analytics_list 
+        tbody.analytics_list 
               tr.analytics_list_item(v-for="worker in availableWorkers" :key="worker.id")
                   analytics-item(:id="worker.id" :img="worker.img" :name="worker.name" :email="worker.email" :date="worker.date" :status="worker.status")
 </template>

@@ -8,13 +8,15 @@ import { filterStatus } from "../helpers/Filter.js";
 export const useAnalyticsStore = defineStore("analytics", {
   state: () => {
     return {
+      //dateUnformatted: new Date(1993, 6, 28),
       coworkers: [
         {
           id: "264",
           img: "../../../src/assets/images/coworkers/1.png",
           name: "Arrora Gaur",
           email: "arroragaur@gmail.com",
-          date: "12 Dec, 2020",
+          //date: this.dateUnformatted.getFullYear() + "-" + (this.dateUnformatted.getMonth()+1) + "-" + this.dateUnformatted.getDate(),
+          date: new Date(2023, 6, 28).toLocaleDateString(),
           status: "Complete",
         },
         {
@@ -22,7 +24,7 @@ export const useAnalyticsStore = defineStore("analytics", {
           img: "../../../src/assets/images/coworkers/2.png",
           name: "James Mullican",
           email: "jamesmullican@gmail.com",
-          date: "12 Dec, 2020",
+          date: new Date(2023, 6, 15).toLocaleDateString(),
           status: "Pending",
         },
         {
@@ -30,7 +32,7 @@ export const useAnalyticsStore = defineStore("analytics", {
           img: "../../../src/assets/images/coworkers/3.png",
           name: "Robert Bacins",
           email: "robertbacins@gmail.com",
-          date: "12 Dec, 2020",
+          date: new Date(2023, 1, 23).toLocaleDateString(),
           status: "Complete",
         },
         {
@@ -38,7 +40,7 @@ export const useAnalyticsStore = defineStore("analytics", {
           img: "../../../src/assets/images/coworkers/4.png",
           name: "Bethany Jackson",
           email: "bethanyjackson@gmail.com",
-          date: "12 Dec, 2020",
+          date: new Date(2023, 3, 18).toLocaleDateString(),
           status: "Cancel",
         },
         {
@@ -46,7 +48,7 @@ export const useAnalyticsStore = defineStore("analytics", {
           img: "../../../src/assets/images/coworkers/5.png",
           name: "Anne Jacob",
           email: "annejacob@gmail.com",
-          date: "12 Dec, 2020",
+          date: new Date(2023, 8, 25).toLocaleDateString(),
           status: "Complete",
         },
         {
@@ -54,7 +56,7 @@ export const useAnalyticsStore = defineStore("analytics", {
           img: "../../../src/assets/images/coworkers/6.png",
           name: "Jhon Deo",
           email: "jhondeo32@gmail.com",
-          date: "12 Dec, 2020",
+          date: new Date(2023, 4, 14).toLocaleDateString(),
           status: "Pending",
         },
         {
@@ -62,7 +64,7 @@ export const useAnalyticsStore = defineStore("analytics", {
           img: "../../../src/assets/images/coworkers/7.png",
           name: "James Mullican",
           email: "jamesmullican@gmail.com",
-          date: "12 Dec, 2020",
+          date: new Date(2023, 2, 17).toLocaleDateString(),
           status: "Complete",
         },
         {
@@ -70,7 +72,7 @@ export const useAnalyticsStore = defineStore("analytics", {
           img: "../../../src/assets/images/coworkers/5.png",
           name: "Anne Jacob",
           email: "annejacob@gmail.com",
-          date: "12 Dec, 2020",
+          date: new Date(2023, 6, 26).toLocaleDateString(),
           status: "Complete",
         },
         /* {
@@ -78,7 +80,7 @@ export const useAnalyticsStore = defineStore("analytics", {
           img: "../../../src/assets/images/coworkers/6.png",
           name: "Jhon Deo",
           email: "jhondeo32@gmail.com",
-          date: "12 Dec, 2020",
+          date: new Date(1993, 6, 28).toLocaleDateString(),
           status: "Pending",
         }, */
       ],
@@ -119,13 +121,13 @@ export const useAnalyticsStore = defineStore("analytics", {
     setFiltration(filterOptions) {
       this.filtrations[filterOptions.name.toLowerCase()] = filterOptions.mode;
     },
-    addCoworker(id, img, name, email, date, status) {
+    addCoworker(id, img, name, email, status) {
       const newCoworker = {
         id: id,
         img: img,
         name: name,
         email: email,
-        date: date,
+        date: new Date().toLocaleDateString(),
         status: status,
       };
 

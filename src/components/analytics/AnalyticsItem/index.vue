@@ -24,158 +24,153 @@ import { useAnalyticsStore } from "../../../store/analytics.js";
 const analytics = useAnalyticsStore();
 const props = defineProps(["id", "img", "name", "email", "date", "status"]);
 const isSelected = ref(false);
-//const selectedItem = ref('');
 const statusIsSelected = ref(false);
- 
+
 function selectItem(id) {
-    isSelected.value = !isSelected.value;
-    analytics.selectedItem = id;
+  isSelected.value = !isSelected.value;
+  analytics.selectedItem = id;
 }
 
 function switchStatus() {
-    statusIsSelected.value = !statusIsSelected.value;
+  statusIsSelected.value = !statusIsSelected.value;
 }
-
 </script>
 
 <style scoped lang="scss">
 .coworker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 25px;
+  background-color: var(--white);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  font-weight: 600;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+  color: var(--dark);
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: 2px solid rgb(103, 103, 103, 15%);
+  }
+
+  &_checkbox {
+    width: 5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    padding: 11px 25px;
-    background-color: var(--white);
-    border-radius: 8px;
-    border: 2px solid transparent;
-    font-weight: 600;
-    font-size: 14px;
-    box-sizing: border-box;
-    transition: all 0.3s ease-out;
-    color: var(--dark);
-    cursor: pointer;
+    transform: all 0.3s ease-out;
+
+    &_input {
+      cursor: pointer;
+    }
 
     &:hover {
-        border-bottom: 2px solid rgb(103, 103, 103, 15%);
+      input {
+        background-color: red;
+      }
+    }
+  }
+
+  &_id {
+    width: 10%;
+  }
+  &_person {
+    width: 18%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 14px;
+    box-sizing: border-box;
+
+    .person_photo {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+    }
+  }
+
+  &_email {
+    width: 24%;
+    padding-left: 26px;
+    box-sizing: border-box;
+    position: relative;
+    cursor: pointer;
+
+    &_link {
+      text-decoration: none;
+      color: var(--dark);
     }
 
-    &_checkbox {
-        width: 5%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        transform: all 0.3s ease-out;
-
-        &_input {
-            cursor: pointer;
-        }
-
-        &:hover {
-            input {
-                background-color: red;
-            }
-        }
+    &::before {
+      content: url("../../../assets/icons/email.svg");
+      position: absolute;
+      left: 0;
+      top: 3.5px;
     }
-        
-    &_id {
-        width: 10%;
+  }
+
+  &_date {
+    width: 15%;
+    padding-left: 23px;
+    box-sizing: border-box;
+    position: relative;
+
+    &::before {
+      content: url("../../../assets/icons/date.svg");
+      position: absolute;
+      left: 0;
+      top: 3.5px;
     }
-    &_person {
-        width: 18%;
-        display: flex;
-        justify-content: flex-start;
-        align-items:center;
-        gap: 14px;
-        box-sizing: border-box;
+  }
 
-        .person_photo {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-        }
+  &_state {
+    width: 20%;
+    box-sizing: border-box;
+    .status_mode {
+      border-radius: 22.5px;
+      padding: 13px 47px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
+  }
 
-    &_email {
-        width: 24%;
-        padding-left: 26px;
-        box-sizing: border-box;
-        position: relative;
-        cursor: pointer;
+  &_status {
+    width: 7%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        &_link {
-            text-decoration: none;
-            color: var(--dark);
-        }
-
-        &::before {
-            content: url('../../../assets/icons/email.svg');
-            position: absolute;
-            left: 0;
-            top: 3.5px;
-        }
+    &_button {
+      border: 1px solid transparent;
+      background-color: transparent;
+      cursor: pointer;
     }
+  }
 
-    &_date {
-        width: 15%;
-        padding-left: 23px;
-        box-sizing: border-box;
-        position: relative;
+  .complete {
+    background-color: rgba(58, 151, 76, 20%);
+    color: #3a974c;
+  }
 
-        &::before {
-            content: url('../../../assets/icons/date.svg');
-            position: absolute;
-            left: 0;
-            top: 3.5px;
-        }
+  .pending {
+    background-color: rgba(242, 147, 57, 20%);
+    color: #f29339;
+  }
+
+  .cancel {
+    background-color: rgba(209, 26, 42, 20%);
+    color: #d11a2a;
+  }
+
+  .active {
+    path {
+      fill: #ffd66b;
     }
-
-    &_state {
-        width: 20%;
-        box-sizing: border-box;
-        .status_mode {
-            border-radius: 22.5px;
-            padding: 13px 47px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        
-    }
-
-    &_status {
-        width: 7%;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-
-        &_button {
-            border: 1px solid transparent;
-            background-color: transparent;
-            cursor: pointer;
-        }
-    }
-
-    .complete {
-        background-color: rgba(58, 151, 76, 20%);
-        color: #3A974C;
-    }
-
-    .pending {
-        background-color: rgba(242, 147, 57, 20%);
-        color: #F29339;
-    } 
-     
-    .cancel {
-        background-color: rgba(209, 26, 42, 20%);
-        color: #D11A2A;
-    }
-
-    .active {
-        path {
-            fill: #FFD66B;
-        }
-    }
+  }
 }
 </style>
