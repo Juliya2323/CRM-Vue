@@ -29,9 +29,10 @@ import AnalyticsItem from "../components/analytics/AnalyticsItem/index.vue";
 import AnalyticsFilter from "../components/analytics/AnalyticsFilter.vue";
 import AnalyticsSearch from "../components/analytics/AnalyticsSearch.vue";
 import { useRouter } from "vue-router";
+
 const router = useRouter();
 const analytics = useAnalyticsStore();
-const FILTERS = ["Id", "Name", "Email", "Date", "Satus"];
+const FILTERS = ["Id", "Name", "Email", "Date", "Status"];
 const enteredSearchTerm = ref("");
 const activeSearchTerm = ref("");
 

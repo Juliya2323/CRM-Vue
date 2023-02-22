@@ -97,8 +97,8 @@ html{
 .score-circular .score-inner{
   position: absolute;
   z-index: 11;
-  top: 50%;
-  left: 50%;
+  top: 49%;
+  left: 49%;
   height: 80px;
   width: 80px;
   transform:scale(1.1);

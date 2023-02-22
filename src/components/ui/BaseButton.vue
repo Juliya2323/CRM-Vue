@@ -16,7 +16,7 @@ button {
     transition: all 0.3s ease-out;
 
     &:hover {
-      transform: translateY(-5px);
+      transform: translateY(-3px);
     }
 }
 </style>

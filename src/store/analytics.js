@@ -1,9 +1,9 @@
 import { defineStore } from "pinia";
-import { filterId } from '../helpers/Filter.js';
-import { filterName } from '../helpers/Filter.js';
-import { filterEmail } from '../helpers/Filter.js';
-import { filterDate } from '../helpers/Filter.js';
-import { filterStatus } from '../helpers/Filter.js';
+import { filterId } from "../helpers/Filter.js";
+import { filterName } from "../helpers/Filter.js";
+import { filterEmail } from "../helpers/Filter.js";
+import { filterDate } from "../helpers/Filter.js";
+import { filterStatus } from "../helpers/Filter.js";
 
 export const useAnalyticsStore = defineStore("analytics", {
   state: () => {
@@ -84,32 +84,30 @@ export const useAnalyticsStore = defineStore("analytics", {
       ],
       selectedItem: "",
       filtrations: {
-            "id": null,
-            "name": null,
-            "email": null,
-            "date": null,
-            "status": null
+        id: null,
+        name: null,
+        email: null,
+        date: null,
+        status: null,
       },
     };
   },
   getters: {
     filteredCoworkers() {
-      const coworkers = Object.assign(this.coworkers);
+      const coworkers = JSON.parse(JSON.stringify(this.coworkers));
 
       for (let key in this.filtrations) {
-        
-        if (this.filtrations[key]) {
-          key === "id" && filterId(coworkers, this.filtrations[key]);
+        key === "id" && filterId(coworkers, this.filtrations[key]);
 
-          key === "name" && filterName(coworkers, this.filtrations[key]);
+        key === "name" && filterName(coworkers, this.filtrations[key]);
 
-          key === "email" && filterEmail(coworkers, this.filtrations[key]);
+        key === "email" && filterEmail(coworkers, this.filtrations[key]);
 
-          key === "date" && filterDate(coworkers, this.filtrations[key]);
+        key === "date" && filterDate(coworkers, this.filtrations[key]);
 
-          key === "status" && filterStatus(coworkers, this.filtrations[key]);
-        }
+        key === "status" && filterStatus(coworkers, this.filtrations[key]);
       }
+
       return coworkers;
     },
   },
@@ -118,23 +116,21 @@ export const useAnalyticsStore = defineStore("analytics", {
       const itemIndex = this.coworkers.findIndex((item) => item.id === id);
       this.coworkers.splice(itemIndex, 1);
     },
-    setFiltration(filterID) {
-        this.filtrations[filterID.name.toLowerCase()] = filterID.mode;
+    setFiltration(filterOptions) {
+      this.filtrations[filterOptions.name.toLowerCase()] = filterOptions.mode;
     },
     addCoworker(id, img, name, email, date, status) {
       const newCoworker = {
-          id: id,
-          img: img,
-          name: name,
-          email: email,
-          date: date,
-          status: status
-      }
+        id: id,
+        img: img,
+        name: name,
+        email: email,
+        date: date,
+        status: status,
+      };
 
       this.coworkers.push(newCoworker);
-      console.log('added!')
-
-      
-    }
+      console.log("added!");
+    },
   },
 });
