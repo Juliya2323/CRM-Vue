@@ -1,5 +1,5 @@
 <template lang="pug">
-.bg
+.bg(@click="closeOrder()")
 .order_details
     h2.details_header {{ dashboard.checkedOrder.name }}
     .details_card 

@@ -52,11 +52,9 @@ td {
 }
 .calendar-container {
   position: absolute;
-  top: 40px;
-  right: 40px;
+  top: 81px;
+  right: 30px;
   z-index: 10;
-  width: 330px;
-  height: 290px;
   font-family: "Nunito";
 }
 
