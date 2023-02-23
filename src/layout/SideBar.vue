@@ -1,5 +1,4 @@
 <template lang="pug">
-base-spinner(v-if="isLoading")
 .sidebar
   nav.nav
     .nav_logo(@click="onMain")
@@ -52,6 +51,10 @@ function onMain() {
   justify-content: space-between;
   background-color: var(--white);
   padding: 50px 0 30px;
+
+  @media screen and (max-width: 650px) {
+    width: 90px;
+  }
 }
 
 .nav {
@@ -68,8 +71,16 @@ function onMain() {
     align-items: center;
     cursor: pointer;
 
+    @media screen and (max-width: 650px) {
+      padding: 0;
+    }
+
     &_title {
       margin: 0;
+
+      @media screen and (max-width: 650px) {
+        display: none;
+      }
     }
   }
 
@@ -126,6 +137,12 @@ function onMain() {
         box-sizing: border-box;
         cursor: pointer;
         transition: all 0.3s ease-out;
+
+        span {
+          @media screen and (max-width: 650px) {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -144,11 +161,17 @@ function onMain() {
   align-items: center;
   gap: 30px;
 
+  
+
   .sidebar_upgrade {
     position: relative;
     display: flex;
     justify-content: center;
     justify-content: center;
+
+    @media screen and (max-width: 650px) {
+      display: none;
+    }
 
     .upgrade_bg {
       background-color: url("../assets/icons/manage_bg.svg");
@@ -167,6 +190,10 @@ function onMain() {
     width: 80%;
     cursor: pointer;
 
+    @media screen and (max-width: 650px) {
+      width: fit-content;
+    }
+
     .account_info {
       display: flex;
       justify-content: flex-start;
@@ -178,6 +205,10 @@ function onMain() {
         gap: 6px;
         align-items: flex-start;
         justify-content: center;
+
+        @media screen and (max-width: 650px) {
+          display: none;
+        }
 
         .info_text_name {
           font-weight: 600;
@@ -191,6 +222,12 @@ function onMain() {
           color: var(--medium);
           margin: 0;
         }
+      }
+    }
+
+    .account_logout {
+      @media screen and (max-width: 650px) {
+        display: none;
       }
     }
   }

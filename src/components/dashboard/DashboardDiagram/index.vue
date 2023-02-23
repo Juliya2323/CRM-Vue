@@ -10,5 +10,9 @@ base-card
 <style scoped lang="scss">
     .diagram_title {
         margin: 0 auto;
+
+        @media screen and (max-width: 835px) {
+           color: white;
+        }
     }
 </style>

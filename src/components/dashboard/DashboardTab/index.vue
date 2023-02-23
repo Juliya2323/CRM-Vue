@@ -20,7 +20,6 @@ const props = defineProps(["id", "icon", "amount", "title"]);
   padding-left: 45px;
   display: flex;
   align-items: center;
-  border-radius: 10px;
   gap: 40px;
   width: 268px;
   position: relative;
@@ -31,10 +30,49 @@ const props = defineProps(["id", "icon", "amount", "title"]);
       transform: scale(1.1);
     }
 
+  @media screen and (max-width: 1400px) {
+    padding: 23px;
+    padding-left: 30px;
+    gap: 35px;
+    width: 220px;
+  }
+
+  @media screen and (max-width: 1190px) {
+    padding: 15px;
+    padding-left: 10px;
+    gap: 25px;
+    width: 180px;
+    height: 105px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    width: 220px;
+  }
+
+  @media screen and (max-width: 734px) {
+    width: 300px;
+  }
+
+  @media screen and (max-width: 460px) {
+    width: 260px;
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 220px;
+  }
+
   &_img {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 1400px) {
+      padding-left: 16px;
+    }
+
+    @media screen and (max-width: 1400px) {
+      padding-left: 14px;
+    }
   }
 
   &_description {
@@ -69,6 +107,12 @@ const props = defineProps(["id", "icon", "amount", "title"]);
   background-color: rgba(91, 147, 255, 11%);
   display: block;
   left: 25px;
+
+  @media screen and (max-width: 1190px) {
+    width: 40px;
+    height: 40px;
+    left: 14px;
+  }
 }
 
 .tab.second::after {
@@ -80,6 +124,12 @@ const props = defineProps(["id", "icon", "amount", "title"]);
   background-color: rgba(255, 195, 39, 11%);
   display: block;
   left: 25px;
+
+  @media screen and (max-width: 1190px) {
+    width: 40px;
+    height: 40px;
+    left: 14px;
+  }
 }
 
 .tab.third::after {
@@ -91,6 +141,12 @@ const props = defineProps(["id", "icon", "amount", "title"]);
   background-color: rgba(255, 143, 107, 11%);
   display: block;
   left: 25px;
+
+  @media screen and (max-width: 1190px) {
+    width: 40px;
+    height: 40px;
+    left: 14px;
+  }
 }
 
 .tab.fourth::after {
@@ -102,5 +158,11 @@ const props = defineProps(["id", "icon", "amount", "title"]);
   background-color: rgba(96, 91, 255, 11%);
   display: block;
   left: 25px;
+
+  @media screen and (max-width: 1190px) {
+    width: 40px;
+    height: 40px;
+    left: 14px;
+  }
 }
 </style>

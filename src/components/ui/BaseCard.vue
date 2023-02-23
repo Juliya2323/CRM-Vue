@@ -35,6 +35,10 @@ function switchStatus() {
   height: 100%;
   color: var(--dark);
 
+  @media screen and (max-width: 400px) {
+    padding: 12px 14px;
+  }
+
   &_header {
     display: flex;
     justify-content: space-between;

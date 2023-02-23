@@ -49,28 +49,58 @@ const dashboard = useDashboardStore();
       position: relative;
       text-align: left;
       cursor: pointer;
+
+      @media screen and (max-width: 685px) {
+        display: none;
+      }
     }
     .header_item_prod {
       width: 29%;
       position: relative;
       text-align: left;
       cursor: pointer;
+
+      @media screen and (max-width: 1350px) {
+        width: 34%;
+      }
+
+      @media screen and (max-width: 500px) {
+        width: 60%;
+      }
     }
     .header_item_price {
       width: 16%;
       position: relative;
       text-align: left;
       cursor: pointer;
+
+      @media screen and (max-width: 1350px) {
+        width: 11%;
+      }
+
+      @media screen and (max-width: 500px) {
+        display: none;
+        width: 0;
+      }
     }
     .header_item_total {
       width: 21%;
       position: relative;
       text-align: center;
       cursor: pointer;
+
+      @media screen and (max-width: 500px) {
+        display: none;
+        width: 0;
+      }
     }
     .header_item_amount {
       width: 15%;
       text-align: right;
+
+      @media screen and (max-width: 500px) {
+        width: 30%;
+      }
     }
   }
 

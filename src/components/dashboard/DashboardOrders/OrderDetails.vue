@@ -23,14 +23,11 @@ const dashboard = useDashboardStore();
 
 function closeOrder() {
   dashboard.orderIsChecked = false;
-  dashboard.checkedOrder = '';
+  dashboard.checkedOrder = "";
 }
-
-
 </script>
 
 <style scoped lang="scss">
-
 .bg {
   width: 100%;
   height: 100vh;

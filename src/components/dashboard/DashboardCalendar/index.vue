@@ -40,6 +40,10 @@ function closeCalendar() {
   background-color: rgba(217, 217, 217, 0.4);
   top: 0;
   right: 0;
+
+  @media screen and (max-width: 1300px) {
+    height: 100%;
+    }
 }
 
 table {

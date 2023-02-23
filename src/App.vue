@@ -21,5 +21,9 @@ const dashboard = useDashboardStore();
     height: 100vh;
     background-color: var(--grey);
     position: relative;
+
+    @media screen and (max-width: 1200px) {
+        height: fit-content;
+    }
 }
 </style>

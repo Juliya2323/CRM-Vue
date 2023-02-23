@@ -11,12 +11,12 @@ product-details(v-if="dashboard.productIsChecked")
         ul.dashboard_list
             li(class=".dashboard_list_item" v-for = "tab in dashboard.tabs" :key = "tab.key") 
                 dashboard-tab(:icon="tab.icon" :amount="tab.amount" :title="tab.title" :id="tab.id")
-    section.dashboard_section
+    section.dashboard_section_top
         .dashboard_item_left 
             img.dashboard_img(:src="main" alt="main")
         .dashboard_item_right
             dashboard-diagram
-    section.dashboard_section
+    section.dashboard_section_bottom
         .dashboard_item_left 
             dashboard-orders
         .dashboard_item_right
@@ -55,6 +55,10 @@ function switchCalendar() {
   gap: 20px;
   position: relative;
 
+  @media screen and (max-width: 400px) {
+    padding: 20px;
+  }
+
   &_header {
     display: flex;
     justify-content: space-between;
@@ -65,6 +69,10 @@ function switchCalendar() {
     margin: 0;
     font-weight: 700;
     font-size: 24px;
+
+    @media screen and (max-width: 400px) {
+      font-size: 18px;
+    }
   }
 
   &_calendar {
@@ -104,6 +112,12 @@ function switchCalendar() {
     padding: 0;
     display: flex;
     justify-content: space-between;
+    gap: 25px;
+
+    @media screen and (max-width: 1025px) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   }
 
   &_item_left {
@@ -113,24 +127,77 @@ function switchCalendar() {
     align-items: center;
     background-color: var(--white);
     border-radius: 10px;
+
+    @media screen and (max-width: 1110px) {
+      width: 100%;
+    }
   }
 
   &_item_right {
-    width: 38%;
+    width: 40%;
+
+    @media screen and (max-width: 1110px) {
+      width: 100%;
+    }
   }
 
-  &_section {
+  &_section_top {
     position: relative;
     display: flex;
     justify-content: space-between;
     gap: 30px;
     width: 100%;
     height: 39vh;
+
+    @media screen and (max-width: 1025px) {
+      height: 30vh;
+    }
+
+    @media screen and (max-width: 835px) {
+      flex-wrap: wrap;
+      height: fit-content;
+      justify-content: center;
+    }
+  }
+
+  &_section_bottom {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    height: 39vh;
+
+    @media screen and (max-width: 1110px) {
+      flex-wrap: wrap;
+      height: fit-content;
+      justify-content: center;
+    }
   }
 
   &_img {
     width: fit-content;
     max-height: 300px;
+
+    @media screen and (max-width: 1200px) {
+      max-height: 250px;
+    }
+
+    @media screen and (max-width: 1090px) {
+      max-height: 220px;
+    }
+
+    @media screen and (max-width: 500px) {
+      max-height: 190px;
+      }
+
+      @media screen and (max-width: 445px) {
+      max-height: 150px;
+      }
+
+      @media screen and (max-width: 410px) {
+      max-height: 130px;
+      }
   }
 }
 </style>

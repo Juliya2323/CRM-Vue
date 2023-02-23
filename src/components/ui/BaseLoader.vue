@@ -82,6 +82,7 @@ html{
   box-shadow: 2px 4px 13px rgba(0,0,0,0.09);
   transition: all 1s cubic-bezier(.25,.8,.25,1);
   cursor: pointer;
+
   }
 
 .score-circular:hover {
