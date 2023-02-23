@@ -16,8 +16,7 @@ const props = defineProps(["id", "icon", "amount", "title"]);
   background-color: var(--white);
   border-radius: 10px;
   box-sizing: border-box;
-  padding: 28px;
-  padding-left: 45px;
+  padding: 28px 28px 28px 45px;
   display: flex;
   align-items: center;
   gap: 40px;
@@ -30,49 +29,39 @@ const props = defineProps(["id", "icon", "amount", "title"]);
       transform: scale(1.1);
     }
 
-  @media screen and (max-width: 1400px) {
-    padding: 23px;
-    padding-left: 30px;
-    gap: 35px;
-    width: 220px;
+
+  @media screen and (max-width: 1430px) {
+    gap: 37px;
+    padding: 25px 25px 25px 40px;
+    width: 230px;
   }
 
-  @media screen and (max-width: 1190px) {
-    padding: 15px;
-    padding-left: 10px;
-    gap: 25px;
-    width: 180px;
-    height: 105px;
+  @media screen and (max-width: 1275px) {
+    padding: 25px 20px 25px 30px;
+    width: 210px;
   }
 
-  @media screen and (max-width: 1023px) {
-    width: 220px;
+  @media screen and (max-width: 1188px) {
+    width: 190px;
   }
 
-  @media screen and (max-width: 734px) {
-    width: 300px;
-  }
-
-  @media screen and (max-width: 460px) {
+  @media screen and (max-width: 1111px) {
+    gap: 37px;
+    padding: 25px 25px 25px 40px;
     width: 260px;
   }
 
-  @media screen and (max-width: 400px) {
-    width: 220px;
+  @media screen and (max-width: 818px) {
+    width: 210px;
+    padding: 25px 20px 25px 25px;
   }
+
+  
 
   &_img {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @media screen and (max-width: 1400px) {
-      padding-left: 16px;
-    }
-
-    @media screen and (max-width: 1400px) {
-      padding-left: 14px;
-    }
   }
 
   &_description {
@@ -108,11 +97,25 @@ const props = defineProps(["id", "icon", "amount", "title"]);
   display: block;
   left: 25px;
 
-  @media screen and (max-width: 1190px) {
-    width: 40px;
-    height: 40px;
-    left: 14px;
+  @media screen and (max-width: 1430px) {
+    left: 21px;
   }
+
+  @media screen and (max-width: 1275px) {
+    width: 50px;
+    height: 50px;
+    left: 15px;
+  }
+
+  @media screen and (max-width: 1111px) {
+    left: 25px;
+  }
+
+  @media screen and (max-width: 818px) {
+    left: 11px;
+  }
+
+  
 }
 
 .tab.second::after {
@@ -125,10 +128,22 @@ const props = defineProps(["id", "icon", "amount", "title"]);
   display: block;
   left: 25px;
 
-  @media screen and (max-width: 1190px) {
-    width: 40px;
-    height: 40px;
-    left: 14px;
+  @media screen and (max-width: 1430px) {
+    left: 21px;
+  }
+
+  @media screen and (max-width: 1275px) {
+    width: 50px;
+    height: 50px;
+    left: 15px;
+  }
+
+  @media screen and (max-width: 1111px) {
+    left: 25px;
+  }
+
+  @media screen and (max-width: 818px) {
+    left: 11px;
   }
 }
 
@@ -142,10 +157,22 @@ const props = defineProps(["id", "icon", "amount", "title"]);
   display: block;
   left: 25px;
 
-  @media screen and (max-width: 1190px) {
-    width: 40px;
-    height: 40px;
-    left: 14px;
+  @media screen and (max-width: 1430px) {
+    left: 21px;
+  }
+
+  @media screen and (max-width: 1275px) {
+    width: 50px;
+    height: 50px;
+    left: 15px;
+  }
+
+  @media screen and (max-width: 1111px) {
+    left: 25px;
+  }
+
+  @media screen and (max-width: 818px) {
+    left: 11px;
   }
 }
 
@@ -159,10 +186,22 @@ const props = defineProps(["id", "icon", "amount", "title"]);
   display: block;
   left: 25px;
 
-  @media screen and (max-width: 1190px) {
-    width: 40px;
-    height: 40px;
-    left: 14px;
+  @media screen and (max-width: 1430px) {
+    left: 21px;
+  }
+
+  @media screen and (max-width: 1275px) {
+    width: 50px;
+    height: 50px;
+    left: 15px;
+  }
+
+  @media screen and (max-width: 1111px) {
+    left: 25px;
+  }
+
+  @media screen and (max-width: 818px) {
+    left: 11px;
   }
 }
 </style>

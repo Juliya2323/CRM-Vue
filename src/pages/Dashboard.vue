@@ -114,9 +114,14 @@ function switchCalendar() {
     justify-content: space-between;
     gap: 25px;
 
-    @media screen and (max-width: 1025px) {
+    @media screen and (max-width: 1111px) {
       flex-wrap: wrap;
       justify-content: space-around;
+    }
+
+    @media screen and (max-width: 719px) {
+      max-height: 230px;
+      overflow: scroll;
     }
   }
 
