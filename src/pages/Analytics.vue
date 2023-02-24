@@ -5,7 +5,7 @@
         .analytics_wrapper 
             analytics-search(@search="updateSearch" :search-term="enteredSearchTerm")
             base-button.analytics_button(@click='toAdd') Add New
-    form        
+    .analytics_table_wrapper
       table.analytics_table 
         thead
           tr.analytics_table_items
@@ -82,10 +82,20 @@ function toAdd() {
   flex-direction: column;
   gap: 20px;
 
+  &_table_wrapper {
+      width: 100%;
+      overflow: auto;
+  }
+
   &_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+
+    @media screen and (max-width: 757px) {
+      flex-direction: column;
+    }
   }
 
   &_title {
@@ -125,6 +135,10 @@ function toAdd() {
       justify-content: space-between;
       align-items: center;
       padding: 10px 25px;
+
+      @media screen and (max-width: 1160px) {
+        padding: 10px 18px;
+      }
     }
 
     .item_checkbox {
@@ -143,18 +157,7 @@ function toAdd() {
       width: 10%;
       cursor: pointer;
     }
-    .item_name {
-      width: 18%;
-    }
-    .item_email {
-      width: 24%;
-    }
-    .item_date {
-      width: 15%;
-    }
-    .item_status {
-      width: 20%;
-    }
+    
     .item_delete {
       width: 7%;
       display: flex;
@@ -185,6 +188,10 @@ function toAdd() {
       transition: all 0.3s ease-out;
       color: var(--dark);
       cursor: pointer;
+
+      @media screen and (max-width: 1160px) {
+        padding: 11px 18px;
+      }
 
       &:hover {
         border-bottom: 2px solid rgb(103, 103, 103, 15%);

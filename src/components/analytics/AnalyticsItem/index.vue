@@ -30,123 +30,135 @@ function switchStatus() {
 </script>
 
 <style scoped lang="scss">
+.coworker_checkbox {
+  width: 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transform: all 0.3s ease-out;
 
-
-  .coworker_checkbox {
-    width: 5%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    transform: all 0.3s ease-out;
-
-    .coworker_input {
-      cursor: pointer;
-    }
-
-    .coworker:hover {
-      input {
-        background-color: red;
-      }
-    }
-  }
-
-  .coworker_id {
-    width: 10%;
-  }
-  .coworker_person {
-    width: 18%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 14px;
-    box-sizing: border-box;
-
-    .person_photo {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-    }
-  }
-
-  .coworker_email {
-    width: 24%;
-    padding-left: 26px;
-    box-sizing: border-box;
-    position: relative;
+  .coworker_input {
     cursor: pointer;
-
-    &_link {
-      text-decoration: none;
-      color: var(--dark);
-    }
-
-    &::before {
-      content: url("../../../assets/icons/email.svg");
-      position: absolute;
-      left: 0;
-      top: 3.5px;
-    }
   }
 
-  .coworker_date {
-    width: 15%;
-    padding-left: 23px;
-    box-sizing: border-box;
-    position: relative;
-
-    &::before {
-      content: url("../../../assets/icons/date.svg");
-      position: absolute;
-      left: 0;
-      top: 3.5px;
+  .coworker:hover {
+    input {
+      background-color: red;
     }
   }
+}
 
-  .coworker_state {
-    width: 20%;
-    box-sizing: border-box;
-    .status_mode {
-      border-radius: 22.5px;
-      padding: 13px 47px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
+.coworker_id {
+  width: 10%;
 
-  .coworker_status {
+  @media screen and (max-width: 1195px) {
     width: 7%;
-    box-sizing: border-box;
+  }
+}
+.coworker_person {
+  width: 18%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 14px;
+  box-sizing: border-box;
+
+  .person_photo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
+}
+
+.coworker_email {
+  width: 24%;
+  padding-left: 26px;
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+
+  @media screen and (max-width: 1195px) {
+    width: 27%;
+  }
+
+  @media screen and (max-width: 1100px) {
+    width: 160px;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    margin-right: 6px;
+  }
+
+  &_link {
+    text-decoration: none;
+    color: var(--dark);
+  }
+
+  &::before {
+    content: url("../../../assets/icons/email.svg");
+    position: absolute;
+    left: 0;
+    top: 3.5px;
+  }
+}
+
+.coworker_date {
+  width: 15%;
+  padding-left: 23px;
+  box-sizing: border-box;
+  position: relative;
+
+  &::before {
+    content: url("../../../assets/icons/date.svg");
+    position: absolute;
+    left: 0;
+    top: 3.5px;
+  }
+}
+
+.coworker_state {
+  width: 20%;
+  box-sizing: border-box;
+  .status_mode {
+    border-radius: 22.5px;
+    padding: 13px 47px;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    &_button {
-      border: 1px solid transparent;
-      background-color: transparent;
-      cursor: pointer;
-    }
   }
+}
 
-  .complete {
-    background-color: rgba(58, 151, 76, 20%);
-    color: #3a974c;
+.coworker_status {
+  width: 7%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_button {
+    border: 1px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
   }
+}
 
-  .pending {
-    background-color: rgba(242, 147, 57, 20%);
-    color: #f29339;
+.complete {
+  background-color: rgba(58, 151, 76, 20%);
+  color: #3a974c;
+}
+
+.pending {
+  background-color: rgba(242, 147, 57, 20%);
+  color: #f29339;
+}
+
+.cancel {
+  background-color: rgba(209, 26, 42, 20%);
+  color: #d11a2a;
+}
+
+.active {
+  path {
+    fill: #ffd66b;
   }
-
-  .cancel {
-    background-color: rgba(209, 26, 42, 20%);
-    color: #d11a2a;
-  }
-
-  .active {
-    path {
-      fill: #ffd66b;
-    }
-  }
-
+}
 </style>

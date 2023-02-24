@@ -12,15 +12,15 @@
 import { ref } from "vue";
 import arrow from "../../assets/icons/arrow.svg";
 
-const mode = ref('default');
+const mode = ref("default");
 const props = defineProps(["title"]);
 const emit = defineEmits(["active-filter"]);
 
 function toggleFilter() {
   mode.value = {
-    down: 'default',
+    down: "default",
     up: "down",
-    'default': "up",
+    default: "up",
   }[mode.value];
 
   emit("active-filter", mode.value);
@@ -54,6 +54,10 @@ function toggleFilter() {
 
 .m-Id {
   width: 12%;
+
+  @media screen and (max-width: 1195px) {
+    width: 9%;
+  }
 }
 
 .m-Name {
@@ -62,6 +66,10 @@ function toggleFilter() {
 
 .m-Email {
   width: 27%;
+
+  @media screen and (max-width: 1195px) {
+    width: 30%;
+  }
 }
 
 .m-Date {
