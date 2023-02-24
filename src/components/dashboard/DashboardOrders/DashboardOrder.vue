@@ -33,7 +33,7 @@ const props = defineProps(["no", "img", "name", "price", "total", "amount"]);
     text-align: left;
 
     @media screen and (max-width: 685px) {
-        display: none;
+      display: none;
     }
   }
 
@@ -49,9 +49,9 @@ const props = defineProps(["no", "img", "name", "price", "total", "amount"]);
     }
 
     @media screen and (max-width: 500px) {
-        width: 60%;
-      }
-    
+      width: 60%;
+    }
+
     &_img {
       width: 30px;
       height: 30px;
@@ -64,13 +64,13 @@ const props = defineProps(["no", "img", "name", "price", "total", "amount"]);
     justify-content: center;
 
     @media screen and (max-width: 1350px) {
-        width: 11%;
+      width: 11%;
     }
 
     @media screen and (max-width: 500px) {
-        display: none;
-        width: 0;
-      }
+      display: none;
+      width: 0;
+    }
   }
 
   &_total {
@@ -83,9 +83,9 @@ const props = defineProps(["no", "img", "name", "price", "total", "amount"]);
     position: relative;
 
     @media screen and (max-width: 500px) {
-        display: none;
-        width: 0;
-      }
+      display: none;
+      width: 0;
+    }
 
     &::after {
       content: "";
@@ -104,8 +104,8 @@ const props = defineProps(["no", "img", "name", "price", "total", "amount"]);
     text-align: right;
 
     @media screen and (max-width: 500px) {
-        width: 30%;
-      }
+      width: 30%;
+    }
   }
 }
 </style>

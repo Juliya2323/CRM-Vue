@@ -36,6 +36,10 @@ function closeOrder() {
   background-color: rgba(217, 217, 217, 0.4);
   top: 0;
   right: 0;
+
+  @media screen and (max-width: 1200px) {
+    height: 100%;
+  }
 }
 .order_details {
   position: absolute;
@@ -54,6 +58,59 @@ function closeOrder() {
   justify-content: space-between;
   align-items: center;
 
+  @media screen and (max-width: 1200px) {
+    width: 500px;
+    height: 450px;
+    top: 252px;
+  }
+
+  @media screen and (max-width: 1124px) {
+    top: 270px;
+  }
+
+  @media screen and (max-width: 1111px) {
+    top: 557px;
+  }
+
+  @media screen and (max-width: 975px) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: 834px) {
+    top: 655px;
+  }
+
+  @media screen and (max-width: 762px) {
+    width: 330px;
+  }
+
+  @media screen and (max-width: 762px) {
+    left: 24%;
+  }
+
+  @media screen and (max-width: 762px) {
+    left: 22%;
+  }
+
+  @media screen and (max-width: 565px) {
+    left: 18%;
+  }
+
+  @media screen and (max-width: 520px) {
+    width: 300px;
+    padding: 15px;
+    gap: 10px;
+    left: 13%;
+  }
+
+  @media screen and (max-width: 405px) {
+    left: 20px;
+  }
+
+  @media screen and (max-width: 365px) {
+    left: 10px;
+  }
+
   .details_header {
     width: 100%;
     margin: 0;
@@ -70,9 +127,33 @@ function closeOrder() {
     gap: 40px;
     align-items: center;
 
+    @media screen and (max-width: 565px) {
+      gap: 0;
+      width: 300px;
+      height: 400px;
+      padding: 5px;
+    }
+
+    @media screen and (max-width: 520px) {
+      width: 250px;
+    }
+
     &_img {
       width: 300px;
       height: 300px;
+
+      @media screen and (max-width: 975px) {
+        width: 200px;
+        height: 200px;
+      }
+
+      @media screen and (max-width: 762px) {
+        width: 150px;
+        height: 150px;
+      }
+
+      @media screen and (max-width: 520px) {
+      }
     }
 
     &_list {
@@ -96,6 +177,10 @@ function closeOrder() {
         display: flex;
         flex-direction: column;
         gap: 15px;
+
+        @media screen and (max-width: 520px) {
+          gap: 5px;
+        }
       }
     }
 

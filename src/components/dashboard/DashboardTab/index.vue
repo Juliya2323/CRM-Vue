@@ -48,10 +48,10 @@ const props = defineProps(["id", "icon", "amount", "title"]);
   @media screen and (max-width: 1111px) {
     gap: 37px;
     padding: 25px 25px 25px 40px;
-    width: 260px;
+    width: 263px;
   }
 
-  @media screen and (max-width: 818px) {
+  @media screen and (max-width: 825px) {
     width: 210px;
     padding: 25px 20px 25px 25px;
   }
