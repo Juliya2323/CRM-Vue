@@ -75,14 +75,14 @@ export const useAnalyticsStore = defineStore("analytics", {
           date: new Date(2023, 6, 26).toLocaleDateString(),
           status: "Complete",
         },
-        /* {
+        {
           id: "785",
           img: "../../../src/assets/images/coworkers/6.png",
           name: "Jhon Deo",
           email: "jhondeo32@gmail.com",
           date: new Date(1993, 6, 28).toLocaleDateString(),
           status: "Pending",
-        }, */
+        }, 
       ],
       coworkerIsSelected: false,
       selectedItem: null,
@@ -93,6 +93,7 @@ export const useAnalyticsStore = defineStore("analytics", {
         date: null,
         status: null,
       },
+      statuses: ['Complete', 'Pending', 'Cancel'],
     };
   },
   getters: {
@@ -112,7 +113,7 @@ export const useAnalyticsStore = defineStore("analytics", {
       }
 
       return coworkers;
-    },
+    }
   },
   actions: {
     deleteItem(id) {
@@ -124,6 +125,10 @@ export const useAnalyticsStore = defineStore("analytics", {
     setFiltration(filterOptions) {
       this.filtrations[filterOptions.name.toLowerCase()] = filterOptions.mode;
     },
+    arrayRandElement(arr) {
+      var rand = Math.floor(Math.random() * arr.length);
+      return arr[rand];
+    },
     addCoworker(id, img, name, email, status) {
       const newCoworker = {
         id: id,
@@ -131,11 +136,11 @@ export const useAnalyticsStore = defineStore("analytics", {
         name: name,
         email: email,
         date: new Date().toLocaleDateString(),
-        status: status,
+        status: this.arrayRandElement(this.statuses),
       };
 
       this.coworkers.push(newCoworker);
-      console.log("added!");
-    },
+      console.log(newCoworker);
+    }
   },
 });
