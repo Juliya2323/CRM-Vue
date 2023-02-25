@@ -155,8 +155,8 @@ function switchCalendar() {
     width: 100%;
     height: 39vh;
 
-    @media screen and (max-width: 1025px) {
-      height: 30vh;
+    @media screen and (max-width: 1111px) {
+      height: 50vh;
     }
 
     @media screen and (max-width: 835px) {

@@ -11,14 +11,14 @@ form.add_form(@submit.prevent="submitForm")
       span.user Id 
     .inputBox
       input(type="text" required="required" v-model="enteredImg")
-      span.user ImgLink
+      span.user Image Link
     .inputBox
       input(type="text" required="required" v-model="enteredName")
       span.user Name
     .inputBox
       input(type="email" required="required" v-model="enteredEmail")
       span Email
-    button.enter(type="submit") Add   
+    base-button.enter(type="submit") Add   
 </template>
 
 <script setup>
@@ -65,7 +65,7 @@ function confirmError() {
 }
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .add_dialog {
   position: absolute;
   top: 0;
@@ -202,17 +202,14 @@ function confirmError() {
 }
 
 .enter {
-  height: 45px;
-  width: 100px;
-  border-radius: 5px;
-  border: 2px solid #000;
+  width: 100%;
   cursor: pointer;
-  background-color: transparent;
   transition: 0.5s;
   text-transform: uppercase;
   font-size: 10px;
   letter-spacing: 2px;
   margin-top: 30px;
+
 }
 
 .enter:hover {
