@@ -75,7 +75,7 @@ function switchStatus() {
 
   @media screen and (max-width: 420px) {
     width: 170px;
-      }
+  }
 
   .person_photo {
     width: 36px;
@@ -98,17 +98,15 @@ function switchStatus() {
   @media screen and (max-width: 1100px) {
     width: 160px;
     text-overflow: ellipsis;
-    overflow: hidden; 
+    overflow: hidden;
     margin-right: 6px;
   }
 
   @media screen and (max-width: 950px) {
     width: fit-content;
-    overflow:visible; 
+    overflow: visible;
     margin-right: 6px;
   }
-
-  
 
   &_link {
     text-decoration: none;
@@ -131,7 +129,7 @@ function switchStatus() {
 
   @media screen and (max-width: 945px) {
     width: fit-content;
-      }
+  }
 
   &::before {
     content: url("../../../assets/icons/date.svg");
@@ -158,11 +156,11 @@ function switchStatus() {
 
   @media screen and (max-width: 465px) {
     width: 210px;
-        }
+  }
 
-        @media screen and (max-width: 380px) {
+  @media screen and (max-width: 380px) {
     width: 170px;
-      }
+  }
 }
 
 .coworker_status {

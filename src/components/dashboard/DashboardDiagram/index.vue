@@ -8,11 +8,11 @@ base-card
 </template>
 
 <style scoped lang="scss">
-    .diagram_title {
-        margin: 0 auto;
+.diagram_title {
+  margin: 0 auto;
 
-        @media screen and (max-width: 835px) {
-           color: white;
-        }
-    }
+  @media screen and (max-width: 835px) {
+    color: white;
+  }
+}
 </style>

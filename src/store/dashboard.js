@@ -131,7 +131,7 @@ export const useDashboardStore = defineStore("dashboard", {
             "Super Retina XDR display featuring",
             "Always-On and ProMotion",
             "Dynamic Island, a magical new way to interact with iPhone",
-            "48MP Main camera for up to 4x greater resolution"
+            "48MP Main camera for up to 4x greater resolution",
           ],
         },
       ],

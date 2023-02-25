@@ -103,7 +103,6 @@ function closeProduct() {
   }
 
   @media screen and (max-width: 400px) {
-    
   }
 
   .details_header {
@@ -163,10 +162,10 @@ function closeProduct() {
       font-weight: 700;
     }
 
-    .description_section  {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
+    .description_section {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
   }
 

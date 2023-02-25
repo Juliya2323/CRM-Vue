@@ -82,15 +82,13 @@ function toAdd() {
   flex-direction: column;
   gap: 20px;
 
-  
-
   @media screen and (max-width: 1200px) {
-      height: 100vh;
-    }
+    height: 100vh;
+  }
 
-    @media screen and (max-width: 435px) {
-      padding: 20px;
-        }
+  @media screen and (max-width: 435px) {
+    padding: 20px;
+  }
 
   &_table_wrapper {
     width: 100%;
@@ -102,7 +100,6 @@ function toAdd() {
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    
 
     @media screen and (max-width: 757px) {
       flex-direction: column;
@@ -123,7 +120,7 @@ function toAdd() {
     gap: 20px;
 
     @media screen and (max-width: 380px) {
-    gap: 10px;
+      gap: 10px;
     }
   }
 
@@ -133,10 +130,10 @@ function toAdd() {
 
     @media screen and (max-width: 495px) {
       padding: 13px 16px;
-        }
+    }
 
-        @media screen and (max-width: 380px) {
-          padding: 13px 12px;
+    @media screen and (max-width: 380px) {
+      padding: 13px 12px;
     }
 
     &::after {
@@ -149,7 +146,7 @@ function toAdd() {
 
       @media screen and (max-width: 495px) {
         display: none;
-        }
+      }
     }
   }
 
@@ -192,7 +189,7 @@ function toAdd() {
       width: 10%;
       cursor: pointer;
     }
-    
+
     .item_delete {
       width: 7%;
       display: flex;
@@ -238,7 +235,6 @@ function toAdd() {
 
       @media screen and (max-width: 420px) {
         padding: 11px 15px;
-
       }
 
       @media screen and (max-width: 380px) {

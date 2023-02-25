@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const isSelected = ref(false);
 
@@ -68,7 +68,7 @@ function switchStatus() {
 
 .active {
   path {
-      fill: #FFD66B;
+    fill: #ffd66b;
   }
 }
 </style>

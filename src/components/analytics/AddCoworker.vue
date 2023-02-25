@@ -30,7 +30,7 @@ form.add_form(@submit.prevent="submitForm")
 import { ref } from "vue";
 import { useAnalyticsStore } from "../../store/analytics.js";
 import { useRouter } from "vue-router";
-import logoImg from '../../assets/icons/logo.svg';
+import logoImg from "../../assets/icons/logo.svg";
 
 const logo = ref(logoImg);
 const router = useRouter();
@@ -45,7 +45,7 @@ const inputIsInvalid = ref(false);
 
 function submitForm() {
   if (
-    enteredId.value.trim() === "" || 
+    enteredId.value.trim() === "" ||
     enteredImg.value.trim() === "" ||
     enteredName.value.trim() === "" ||
     enteredEmail.value.trim() === "" ||
@@ -100,9 +100,10 @@ function confirmError() {
     align-items: center;
   }
 
-  input, select {
+  input,
+  select {
     padding: 11px;
-    background-color: #FAFAFB;
+    background-color: #fafafb;
     border: 1px solid transparent;
     border-radius: 5px;
     width: 100%;

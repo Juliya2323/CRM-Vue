@@ -40,7 +40,6 @@ const isLoading = ref(false);
 function onMain() {
   router.push("/dashboard");
 }
-
 </script>
 
 <style scoped lang="scss">
@@ -160,8 +159,6 @@ function onMain() {
   justify-content: space-between;
   align-items: center;
   gap: 30px;
-
-  
 
   .sidebar_upgrade {
     position: relative;

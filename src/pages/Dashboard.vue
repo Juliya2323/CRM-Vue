@@ -31,8 +31,8 @@ import DashboardDiagram from "../components/dashboard/DashboardDiagram/index.vue
 import DashboardOrders from "../components/dashboard/DashboardOrders/index.vue";
 import DashboardProducts from "../components/dashboard/DashboardProducts/index.vue";
 import DashboardCalendar from "../components/dashboard/DashboardCalendar/index.vue";
-import OrderDetails from '../components/dashboard/DashboardOrders/OrderDetails.vue';
-import ProductDetails from '../components/dashboard/DashboardProducts/ProductDetails.vue';
+import OrderDetails from "../components/dashboard/DashboardOrders/OrderDetails.vue";
+import ProductDetails from "../components/dashboard/DashboardProducts/ProductDetails.vue";
 import Main from "../assets/icons/main.svg";
 
 const dashboard = useDashboardStore();
@@ -194,15 +194,15 @@ function switchCalendar() {
 
     @media screen and (max-width: 500px) {
       max-height: 190px;
-      }
+    }
 
-      @media screen and (max-width: 445px) {
+    @media screen and (max-width: 445px) {
       max-height: 150px;
-      }
+    }
 
-      @media screen and (max-width: 410px) {
+    @media screen and (max-width: 410px) {
       max-height: 130px;
-      }
+    }
   }
 }
 </style>

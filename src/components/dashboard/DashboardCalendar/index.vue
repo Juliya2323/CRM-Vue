@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import {ref} from 'vue';
+import { ref } from "vue";
 import { useDashboardStore } from "../../../store/dashboard.js";
 
 const dashboard = useDashboardStore();
@@ -43,7 +43,7 @@ function closeCalendar() {
 
   @media screen and (max-width: 1300px) {
     height: 100%;
-    }
+  }
 }
 
 table {

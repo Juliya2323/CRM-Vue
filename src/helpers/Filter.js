@@ -1,5 +1,5 @@
 function sortUp(items, flag, option) {
-  if(flag === 'up') {
+  if (flag === "up") {
     items.sort((a, b) => {
       if (a[option].toLowerCase() < b[option].toLowerCase()) {
         return -1;
@@ -13,7 +13,7 @@ function sortUp(items, flag, option) {
 }
 
 function sortDown(items, flag, option) {
-  if(flag === 'down') {
+  if (flag === "down") {
     items.sort((a, b) => {
       if (a[option].toLowerCase() > b[option].toLowerCase()) {
         return -1;
@@ -27,36 +27,35 @@ function sortDown(items, flag, option) {
 }
 
 export function filterId(items, flag) {
-    
-  if(flag === 'up') {
+  if (flag === "up") {
     items.sort((a, b) => b.id - a.id);
   }
 
-  if(flag === 'down') {
+  if (flag === "down") {
     items.sort((a, b) => a.id - b.id);
   }
 }
 
-export function filterName(items, flag, option = 'name') {
+export function filterName(items, flag, option = "name") {
   sortUp(items, flag, option);
 
   sortDown(items, flag, option);
 }
 
-export function filterEmail(items, flag, option = 'email') {
-  sortUp(items, flag, option);
-  
-  sortDown(items, flag, option);
-}
-
-export function filterDate(items, flag, option = 'date') {
+export function filterEmail(items, flag, option = "email") {
   sortUp(items, flag, option);
 
   sortDown(items, flag, option);
 }
 
-export function filterStatus(items, flag, option = 'status') {
+export function filterDate(items, flag, option = "date") {
   sortUp(items, flag, option);
-  
+
+  sortDown(items, flag, option);
+}
+
+export function filterStatus(items, flag, option = "status") {
+  sortUp(items, flag, option);
+
   sortDown(items, flag, option);
 }

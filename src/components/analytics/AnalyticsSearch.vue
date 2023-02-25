@@ -24,11 +24,11 @@ function search(event) {
 
   @media screen and (max-width: 495px) {
     width: 170px;
-    }
+  }
 
-    @media screen and (max-width: 495px) {
+  @media screen and (max-width: 495px) {
     width: 140px;
-    }
+  }
 
   &:hover {
     border: 0.4px solid var(--medium);
@@ -51,10 +51,10 @@ function search(event) {
   }
 }
 
-
-
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button,
 input::-webkit-search-results-button,
-input::-webkit-search-results-decoration { display: none; }
+input::-webkit-search-results-decoration {
+  display: none;
+}
 </style>
