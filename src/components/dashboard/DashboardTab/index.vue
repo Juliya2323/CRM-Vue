@@ -111,8 +111,8 @@ const props = defineProps(["id", "icon", "amount", "title"]);
     left: 25px;
   }
 
-  @media screen and (max-width: 818px) {
-    left: 11px;
+  @media screen and (max-width: 825px) {
+    left: 10px;
   }
 
   
@@ -142,8 +142,8 @@ const props = defineProps(["id", "icon", "amount", "title"]);
     left: 25px;
   }
 
-  @media screen and (max-width: 818px) {
-    left: 11px;
+  @media screen and (max-width: 825px) {
+    left: 10px;
   }
 }
 
@@ -171,8 +171,8 @@ const props = defineProps(["id", "icon", "amount", "title"]);
     left: 25px;
   }
 
-  @media screen and (max-width: 818px) {
-    left: 11px;
+  @media screen and (max-width: 825px) {
+    left: 10px;
   }
 }
 
@@ -200,8 +200,8 @@ const props = defineProps(["id", "icon", "amount", "title"]);
     left: 25px;
   }
 
-  @media screen and (max-width: 818px) {
-    left: 11px;
+  @media screen and (max-width: 825px) {
+    left: 10px;
   }
 }
 </style>

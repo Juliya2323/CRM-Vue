@@ -22,6 +22,14 @@ function search(event) {
   font-size: 12px;
   cursor: pointer;
 
+  @media screen and (max-width: 495px) {
+    width: 170px;
+    }
+
+    @media screen and (max-width: 495px) {
+    width: 140px;
+    }
+
   &:hover {
     border: 0.4px solid var(--medium);
   }

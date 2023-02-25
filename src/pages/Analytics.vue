@@ -82,9 +82,18 @@ function toAdd() {
   flex-direction: column;
   gap: 20px;
 
+  
+
+  @media screen and (max-width: 1200px) {
+      height: 100vh;
+    }
+
+    @media screen and (max-width: 435px) {
+      padding: 20px;
+        }
+
   &_table_wrapper {
-      width: 100%;
-      overflow: auto;
+    width: 100%;
   }
 
   &_header {
@@ -92,9 +101,12 @@ function toAdd() {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    box-sizing: border-box;
+    
 
     @media screen and (max-width: 757px) {
       flex-direction: column;
+      gap: 20px;
     }
   }
 
@@ -109,11 +121,23 @@ function toAdd() {
     justify-content: center;
     align-items: center;
     gap: 20px;
+
+    @media screen and (max-width: 380px) {
+    gap: 10px;
+    }
   }
 
   &_button {
     padding: 13px 16px 13px 42px;
     position: relative;
+
+    @media screen and (max-width: 495px) {
+      padding: 13px 16px;
+        }
+
+        @media screen and (max-width: 380px) {
+          padding: 13px 12px;
+    }
 
     &::after {
       content: url("../assets/icons/plus.svg");
@@ -122,6 +146,10 @@ function toAdd() {
       position: absolute;
       left: 15px;
       top: 13px;
+
+      @media screen and (max-width: 495px) {
+        display: none;
+        }
     }
   }
 
@@ -129,6 +157,13 @@ function toAdd() {
     width: 100%;
     font-weight: 400;
     font-size: 12px;
+    box-sizing: border-box;
+
+    thead {
+      @media screen and (max-width: 950px) {
+        display: none;
+      }
+    }
 
     &_items {
       display: flex;
@@ -173,6 +208,8 @@ function toAdd() {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    height: 80vh;
+    overflow-y: scroll;
 
     &_item {
       display: flex;
@@ -191,6 +228,21 @@ function toAdd() {
 
       @media screen and (max-width: 1160px) {
         padding: 11px 18px;
+      }
+
+      @media screen and (max-width: 950px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      @media screen and (max-width: 420px) {
+        padding: 11px 15px;
+
+      }
+
+      @media screen and (max-width: 380px) {
+        width: 220px;
       }
 
       &:hover {

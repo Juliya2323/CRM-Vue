@@ -37,6 +37,10 @@ function switchStatus() {
   align-items: center;
   transform: all 0.3s ease-out;
 
+  @media screen and (max-width: 950px) {
+    align-self: flex-start;
+  }
+
   .coworker_input {
     cursor: pointer;
   }
@@ -63,6 +67,16 @@ function switchStatus() {
   gap: 14px;
   box-sizing: border-box;
 
+  @media screen and (max-width: 950px) {
+    width: 250px;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  @media screen and (max-width: 420px) {
+    width: 170px;
+      }
+
   .person_photo {
     width: 36px;
     height: 36px;
@@ -88,6 +102,14 @@ function switchStatus() {
     margin-right: 6px;
   }
 
+  @media screen and (max-width: 950px) {
+    width: fit-content;
+    overflow:visible; 
+    margin-right: 6px;
+  }
+
+  
+
   &_link {
     text-decoration: none;
     color: var(--dark);
@@ -107,6 +129,10 @@ function switchStatus() {
   box-sizing: border-box;
   position: relative;
 
+  @media screen and (max-width: 945px) {
+    width: fit-content;
+      }
+
   &::before {
     content: url("../../../assets/icons/date.svg");
     position: absolute;
@@ -125,6 +151,18 @@ function switchStatus() {
     justify-content: center;
     align-items: center;
   }
+
+  @media screen and (max-width: 950px) {
+    width: 250px;
+  }
+
+  @media screen and (max-width: 465px) {
+    width: 210px;
+        }
+
+        @media screen and (max-width: 380px) {
+    width: 170px;
+      }
 }
 
 .coworker_status {
@@ -133,6 +171,10 @@ function switchStatus() {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 950px) {
+    display: none;
+  }
 
   &_button {
     border: 1px solid transparent;
