@@ -16,7 +16,6 @@ app.component("VueDatePicker", VueDatePicker);
 app.component("base-button", BaseButton);
 app.component("base-card", BaseCard);
 app.component("base-loader", BaseLoader);
-app.component("base-spinner", BaseSpinner);
 app.use(router);
 app.use(pinia);
 app.mount("#app");

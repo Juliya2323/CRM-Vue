@@ -85,6 +85,32 @@ function confirmError() {
   align-items: space-between;
   border-radius: 15px;
 
+  @media screen and (max-width: 1200px) {
+    margin: 11% auto;
+  }
+
+  @media screen and (max-width: 646px) {
+    margin: 13% 20%;
+  }
+
+  @media screen and (max-width: 580px) {
+    margin: 13% 10%;
+  }
+
+  @media screen and (max-width: 520px) {
+    margin: 16% 40px;
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 460px) {
+    margin: 16% 20px;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding: 20px 15px;
+    margin: 15% 15px;
+  }
+
   &_img {
     width: 60px;
     height: 60px;
@@ -98,6 +124,14 @@ function confirmError() {
     justify-content: left;
     gap: 15px;
     align-items: center;
+
+    @media screen and (max-width: 720px) {
+      width: 250px;
+    }
+
+    @media screen and (max-width: 460px) {
+      width: 210px;
+    }
   }
 
   input,
