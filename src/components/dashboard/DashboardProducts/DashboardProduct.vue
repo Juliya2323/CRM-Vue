@@ -28,6 +28,11 @@ const props = defineProps(["img", "name", "rating", "cost"]);
     width: 96px;
     height: 96px;
     border-radius: 10px;
+
+    @media screen and (max-width: 350px) {
+      width: 60px;
+      height: 60px;
+    }
   }
 
   &_info {
