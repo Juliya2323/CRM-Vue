@@ -110,7 +110,7 @@ export const useDashboardStore = defineStore("dashboard", {
           id: "1",
           img: "/images/shoes.jpg",
           name: "Thebe Magugu Shoes",
-          rating: "../../../src/assets/icons/four.svg",
+          rating: "/icons/four.svg",
           cost: 87,
           details: [
             "Regular fit",
@@ -124,7 +124,7 @@ export const useDashboardStore = defineStore("dashboard", {
           id: "2",
           img: "/images/iphone.jpg",
           name: "iPhone 14 Pro Max",
-          rating: "../../../src/assets/icons/five.svg",
+          rating: "/icons/five.svg",
           cost: 987,
           details: [
             "17.00 cm (6.7-inch)",
