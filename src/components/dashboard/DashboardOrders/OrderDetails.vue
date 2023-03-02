@@ -55,7 +55,7 @@ function closeOrder() {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
   @media screen and (max-width: 1200px) {
