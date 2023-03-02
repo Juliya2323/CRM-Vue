@@ -32,7 +32,7 @@
 <script setup>
 import { ref } from "vue";
 import { useRouter, useRoute } from "vue-router";
-import Logo from "../assets/icons/logo.svg";
+import Logo from "@/assets/icons/logo.svg";
 const router = useRouter();
 const route = useRoute();
 const isLoading = ref(false);
