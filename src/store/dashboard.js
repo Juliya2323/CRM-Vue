@@ -6,7 +6,7 @@ export const useDashboardStore = defineStore("dashboard", {
       tabs: [
         {
           id: "first",
-          icon: "../../public/icons/heart.svg",
+          icon: "../icons/heart.svg",
           amount: "178",
           title: "Save Products",
         },
