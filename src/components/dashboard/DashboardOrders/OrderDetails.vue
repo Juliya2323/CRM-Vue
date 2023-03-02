@@ -191,6 +191,7 @@ function closeOrder() {
 
     &_cost {
       font-weight: 700;
+      margin: 0;
     }
 
     &_title {

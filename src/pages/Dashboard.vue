@@ -56,7 +56,7 @@ function switchCalendar() {
   gap: 20px;
   position: relative;
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 420px) {
     padding: 20px;
   }
 
@@ -177,6 +177,10 @@ function switchCalendar() {
       flex-wrap: wrap;
       height: fit-content;
       justify-content: center;
+    }
+
+    @media screen and (max-width: 420px) {
+      gap: 10px;
     }
   }
 
