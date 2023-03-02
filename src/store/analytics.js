@@ -20,7 +20,7 @@ export const useAnalyticsStore = defineStore("analytics", {
         },
         {
           id: "943",
-          img: "../../../src/assets/images/coworkers/2.png",
+          img: "../../images/coworkers/2.png",
           name: "James Mullican",
           email: "jamesmullican@gmail.com",
           date: new Date(2023, 6, 15).toLocaleDateString(),
@@ -28,7 +28,7 @@ export const useAnalyticsStore = defineStore("analytics", {
         },
         {
           id: "543",
-          img: "../../../src/assets/images/coworkers/3.png",
+          img: "../../images/coworkers/3.png",
           name: "Robert Bacins",
           email: "robertbacins@gmail.com",
           date: new Date(2023, 1, 23).toLocaleDateString(),
@@ -36,7 +36,7 @@ export const useAnalyticsStore = defineStore("analytics", {
         },
         {
           id: "379",
-          img: "../../../src/assets/images/coworkers/4.png",
+          img: ".../../images/coworkers/4.png",
           name: "Bethany Jackson",
           email: "bethanyjackson@gmail.com",
           date: new Date(2023, 3, 18).toLocaleDateString(),
@@ -44,7 +44,7 @@ export const useAnalyticsStore = defineStore("analytics", {
         },
         {
           id: "637",
-          img: "../../../src/assets/images/coworkers/5.png",
+          img: "../../images/coworkers/5.png",
           name: "Anne Jacob",
           email: "annejacob@gmail.com",
           date: new Date(2023, 8, 25).toLocaleDateString(),
@@ -52,7 +52,7 @@ export const useAnalyticsStore = defineStore("analytics", {
         },
         {
           id: "428",
-          img: "../../../src/assets/images/coworkers/6.png",
+          img: "../../images/coworkers/6.png",
           name: "Jhon Deo",
           email: "jhondeo32@gmail.com",
           date: new Date(2023, 4, 14).toLocaleDateString(),
@@ -60,7 +60,7 @@ export const useAnalyticsStore = defineStore("analytics", {
         },
         {
           id: "838",
-          img: "../../../src/assets/images/coworkers/7.png",
+          img: "../../images/coworkers/7.png",
           name: "James Mullican",
           email: "jamesmullican@gmail.com",
           date: new Date(2023, 2, 17).toLocaleDateString(),
@@ -68,7 +68,7 @@ export const useAnalyticsStore = defineStore("analytics", {
         },
         {
           id: "912",
-          img: "../../../src/assets/images/coworkers/5.png",
+          img: "../../images/coworkers/8.png",
           name: "Anne Jacob",
           email: "annejacob@gmail.com",
           date: new Date(2023, 6, 26).toLocaleDateString(),
@@ -76,7 +76,7 @@ export const useAnalyticsStore = defineStore("analytics", {
         },
         {
           id: "785",
-          img: "../../../src/assets/images/coworkers/6.png",
+          img: "../../images/coworkers/9.png",
           name: "Jhon Deo",
           email: "jhondeo32@gmail.com",
           date: new Date(1993, 6, 28).toLocaleDateString(),

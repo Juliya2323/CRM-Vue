@@ -12,19 +12,19 @@ export const useDashboardStore = defineStore("dashboard", {
         },
         {
           id: "second",
-          icon: "../../src/assets/icons/game.svg",
+          icon: "../icons/game.svg",
           amount: "20",
           title: "Stock Products",
         },
         {
           id: "third",
-          icon: "../../src/assets/icons/bag.svg",
+          icon: "../icons/bag.svg",
           amount: "190",
           title: "Sales Products",
         },
         {
           id: "fourth",
-          icon: "../../src/assets/icons/work.svg",
+          icon: "../icons/work.svg",
           amount: "12",
           title: "Job Application",
         },
@@ -32,7 +32,7 @@ export const useDashboardStore = defineStore("dashboard", {
       orders: [
         {
           id: "4197787B",
-          img: "../../../src/assets/images/order_1.jpg",
+          img: "/images/order_1.jpg",
           name: "Black Portrait Dress",
           price: "450",
           total: "1325",
@@ -50,7 +50,7 @@ export const useDashboardStore = defineStore("dashboard", {
         },
         {
           id: "LSK05",
-          img: "../../../src/assets/images/order_2.jpg",
+          img: "/images/order_2.jpg",
           name: "Bordeaux Pencil Skirt",
           price: "273",
           total: "953",
@@ -69,7 +69,7 @@ export const useDashboardStore = defineStore("dashboard", {
         },
         {
           id: "STINTINB",
-          img: "../../../src/assets/images/order_3.jpg",
+          img: "/images/order_3.jpg",
           name: "Black Collar Sweater",
           price: "234",
           total: "758",
@@ -87,7 +87,7 @@ export const useDashboardStore = defineStore("dashboard", {
         },
         {
           id: "711DR108",
-          img: "../../../src/assets/images/order_4.jpg",
+          img: "/images/order_4.jpg",
           name: "Army Oversized Blazer",
           price: "500",
           total: "1598",
@@ -108,7 +108,7 @@ export const useDashboardStore = defineStore("dashboard", {
       products: [
         {
           id: "1",
-          img: "../../../src/assets/images/shoes.jpg",
+          img: "/images/shoes.jpg",
           name: "Thebe Magugu Shoes",
           rating: "../../../src/assets/icons/four.svg",
           cost: 87,
@@ -122,7 +122,7 @@ export const useDashboardStore = defineStore("dashboard", {
         },
         {
           id: "2",
-          img: "../../../src/assets/images/iphone.jpg",
+          img: "/images/iphone.jpg",
           name: "iPhone 14 Pro Max",
           rating: "../../../src/assets/icons/five.svg",
           cost: 987,
