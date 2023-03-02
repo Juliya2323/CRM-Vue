@@ -12,7 +12,7 @@ export const useAnalyticsStore = defineStore("analytics", {
       coworkers: [
         {
           id: "264",
-          img: "@/assets/images/coworkers/1.png",
+          img: "../../../src/assets/images/coworkers/1.png",
           name: "Arrora Gaur",
           email: "arroragaur@gmail.com",
           //date: this.dateUnformatted.getFullYear() + "-" + (this.dateUnformatted.getMonth()+1) + "-" + this.dateUnformatted.getDate(),
