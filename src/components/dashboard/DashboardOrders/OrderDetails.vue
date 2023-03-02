@@ -101,6 +101,7 @@ function closeOrder() {
     padding: 15px;
     gap: 10px;
     left: 13%;
+    height: 480px;
   }
 
   @media screen and (max-width: 405px) {
