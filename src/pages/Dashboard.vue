@@ -143,8 +143,9 @@ function switchCalendar() {
       width: 100%;
     }
 
-    @media screen and (max-width: 305px) {
-      width: 90%;
+    @media screen and (max-width: 420px) {
+      width: 80%;
+      
     }
   }
 
@@ -220,13 +221,12 @@ function switchCalendar() {
       max-height: 150px;
     }
 
-    @media screen and (max-width: 410px) {
-      max-height: 130px;
+    @media screen and (max-width: 420px) {
+      max-height: 110px;
+      max-width: 250px;
     }
 
-    @media screen and (max-width: 305px) {
-      max-height: 110px;
-    }
+    
   }
 }
 </style>
