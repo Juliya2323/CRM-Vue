@@ -12,7 +12,7 @@ export const useAnalyticsStore = defineStore("analytics", {
       coworkers: [
         {
           id: "264",
-          img: "../../public/images/coworkers/1.png",
+          img: "../../images/coworkers/1.png",
           name: "Arrora Gaur",
           email: "arroragaur@gmail.com",
           date: new Date(2023, 6, 28).toLocaleDateString(),
