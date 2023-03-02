@@ -15,7 +15,7 @@ product-details(v-if="dashboard.productIsChecked")
         .dashboard_item_left 
             img.dashboard_img(:src="main" alt="main")
         .dashboard_item_right
-            dashboard-diagram
+            dashboard-diagram.diagram
     section.dashboard_section_bottom
         .dashboard_item_left 
             dashboard-orders
@@ -176,6 +176,12 @@ function switchCalendar() {
       flex-wrap: wrap;
       height: fit-content;
       justify-content: center;
+    }
+  }
+
+  .diagram {
+    @media screen and (max-width: 480px) {
+      transform: scale(0.8);
     }
   }
 
