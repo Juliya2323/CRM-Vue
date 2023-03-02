@@ -6,7 +6,7 @@ export const useDashboardStore = defineStore("dashboard", {
       tabs: [
         {
           id: "first",
-          icon: "@/assets/icons/heart.svg",
+          icon: "../../src/assets/icons/heart.svg",
           amount: "178",
           title: "Save Products",
         },
@@ -32,7 +32,7 @@ export const useDashboardStore = defineStore("dashboard", {
       orders: [
         {
           id: "4197787B",
-          img: "@/assets/images/order_1.jpg",
+          img: "../../../src/assets/images/order_1.jpg",
           name: "Black Portrait Dress",
           price: "450",
           total: "1325",
