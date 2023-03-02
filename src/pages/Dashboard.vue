@@ -64,6 +64,11 @@ function switchCalendar() {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 305px) {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 
   &_title {
@@ -137,6 +142,10 @@ function switchCalendar() {
     @media screen and (max-width: 1110px) {
       width: 100%;
     }
+
+    @media screen and (max-width: 305px) {
+      width: 90%;
+    }
   }
 
   &_item_right {
@@ -144,6 +153,10 @@ function switchCalendar() {
 
     @media screen and (max-width: 1110px) {
       width: 100%;
+    }
+
+    @media screen and (max-width: 305px) {
+      width: 90%;
     }
   }
 
@@ -203,6 +216,10 @@ function switchCalendar() {
 
     @media screen and (max-width: 410px) {
       max-height: 130px;
+    }
+
+    @media screen and (max-width: 305px) {
+      max-height: 110px;
     }
   }
 }

@@ -56,12 +56,20 @@ const props = defineProps(["id", "icon", "amount", "title"]);
     padding: 25px 20px 25px 25px;
   }
 
-  
+  @media screen and (max-width: 305px) {
+    width: 190px;
+    padding: 25px 0 25px 15px;
+    gap: 30px;
+  }
 
   &_img {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 305px) {
+      margin-left: 10px;
+    }
   }
 
   &_description {
