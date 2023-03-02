@@ -6,25 +6,25 @@ export const useDashboardStore = defineStore("dashboard", {
       tabs: [
         {
           id: "first",
-          icon: "../../src/assets/icons/heart.svg",
+          icon: "@/assets/icons/heart.svg",
           amount: "178",
           title: "Save Products",
         },
         {
           id: "second",
-          icon: "../../../src/assets/icons/game.svg",
+          icon: "../../src/assets/icons/game.svg",
           amount: "20",
           title: "Stock Products",
         },
         {
           id: "third",
-          icon: "../../../src/assets/icons/bag.svg",
+          icon: "../../src/assets/icons/bag.svg",
           amount: "190",
           title: "Sales Products",
         },
         {
           id: "fourth",
-          icon: "../../../src/assets/icons/work.svg",
+          icon: "../../src/assets/icons/work.svg",
           amount: "12",
           title: "Job Application",
         },
@@ -32,7 +32,7 @@ export const useDashboardStore = defineStore("dashboard", {
       orders: [
         {
           id: "4197787B",
-          img: "../../../src/assets/images/order_1.jpg",
+          img: "@/assets/images/order_1.jpg",
           name: "Black Portrait Dress",
           price: "450",
           total: "1325",
