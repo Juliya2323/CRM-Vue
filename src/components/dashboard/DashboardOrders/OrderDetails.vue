@@ -154,7 +154,7 @@ function closeOrder() {
 
       @media screen and (max-width: 520px) {
         width: 100px;
-        height: fit-content;
+        height: 100px;
       }
     }
 
