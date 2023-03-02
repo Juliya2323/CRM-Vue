@@ -54,6 +54,10 @@ function onMain() {
   @media screen and (max-width: 650px) {
     width: 90px;
   }
+
+  @media screen and (max-width: 350px) {
+    width: 60px;
+  }
 }
 
 .nav {
@@ -136,6 +140,10 @@ function onMain() {
         box-sizing: border-box;
         cursor: pointer;
         transition: all 0.3s ease-out;
+
+        @media screen and (max-width: 350px) {
+          padding: 12px 13px;
+        }
 
         span {
           @media screen and (max-width: 650px) {
