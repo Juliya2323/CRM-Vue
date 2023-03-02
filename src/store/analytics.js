@@ -8,14 +8,13 @@ import { filterStatus } from "../helpers/Filter.js";
 export const useAnalyticsStore = defineStore("analytics", {
   state: () => {
     return {
-      //dateUnformatted: new Date(1993, 6, 28),
+      
       coworkers: [
         {
           id: "264",
-          img: "../../../src/assets/images/coworkers/1.png",
+          img: "../../public/images/coworkers/1.png",
           name: "Arrora Gaur",
           email: "arroragaur@gmail.com",
-          //date: this.dateUnformatted.getFullYear() + "-" + (this.dateUnformatted.getMonth()+1) + "-" + this.dateUnformatted.getDate(),
           date: new Date(2023, 6, 28).toLocaleDateString(),
           status: "Complete",
         },
