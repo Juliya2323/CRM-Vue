@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "Juliya2323/CRM-Vue",
     "ignore": [
       "firebase.json",
       "**/.*",
