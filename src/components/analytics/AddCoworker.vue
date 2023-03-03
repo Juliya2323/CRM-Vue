@@ -110,8 +110,7 @@ function confirmError() {
   gap: 35px;
   border-radius: 15px;
   background: var(--white);
-  box-shadow: 16px 16px 32px #c8c8c8,
-        -16px -16px 32px #fefefe;
+  box-shadow: 16px 16px 32px #c8c8c8, -16px -16px 32px #fefefe;
   border-radius: 8px;
   padding: 30px;
 
@@ -171,8 +170,8 @@ function confirmError() {
   border-radius: 8px;
 }
 
-.inputBox input:valid~span,
-.inputBox input:focus~span {
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
   transform: translateX(113px) translateY(-15px);
   font-size: 0.8em;
   padding: 5px 10px;
@@ -182,8 +181,8 @@ function confirmError() {
   border: 2px;
 }
 
-.inputBox1 input:valid~span,
-.inputBox1 input:focus~span {
+.inputBox1 input:valid ~ span,
+.inputBox1 input:focus ~ span {
   transform: translateX(156px) translateY(-15px);
   font-size: 0.8em;
   padding: 5px 10px;
@@ -209,7 +208,6 @@ function confirmError() {
   font-size: 10px;
   letter-spacing: 2px;
   margin-top: 30px;
-
 }
 
 .enter:hover {

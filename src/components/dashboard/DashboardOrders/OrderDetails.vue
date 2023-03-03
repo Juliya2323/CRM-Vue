@@ -110,7 +110,7 @@ function closeOrder() {
 
   @media screen and (max-width: 365px) {
     left: 10px;
-  } 
+  }
 
   .details_header {
     width: 100%;

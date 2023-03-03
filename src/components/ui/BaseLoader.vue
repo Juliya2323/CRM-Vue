@@ -129,8 +129,6 @@ html {
   color: #ff8f6b;
   content: "4.9";
   animation: score-counter 1.2s linear forwards;
-
-  
 }
 @keyframes score-counter {
   0% {
@@ -256,7 +254,7 @@ html {
 
 @media screen and (max-width: 400px) {
   .score-number::after {
-  font-size: 25px;
+    font-size: 25px;
   }
 
   .score-circular .score-text {

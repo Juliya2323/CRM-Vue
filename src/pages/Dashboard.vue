@@ -145,7 +145,6 @@ function switchCalendar() {
 
     @media screen and (max-width: 420px) {
       width: 80%;
-      
     }
   }
 
@@ -167,11 +166,7 @@ function switchCalendar() {
     justify-content: space-between;
     gap: 30px;
     width: 100%;
-    height: 39vh;
-
-    @media screen and (max-width: 1111px) {
-      height: 50vh;
-    }
+    height: 336px;
 
     @media screen and (max-width: 835px) {
       flex-wrap: wrap;
@@ -196,7 +191,7 @@ function switchCalendar() {
     justify-content: space-between;
     gap: 30px;
     width: 100%;
-    height: 39vh;
+    height: 347px;
 
     @media screen and (max-width: 1110px) {
       flex-wrap: wrap;
@@ -229,8 +224,6 @@ function switchCalendar() {
       max-height: 110px;
       max-width: 250px;
     }
-
-    
   }
 }
 </style>

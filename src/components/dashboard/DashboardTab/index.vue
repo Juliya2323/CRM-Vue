@@ -26,9 +26,8 @@ const props = defineProps(["id", "icon", "amount", "title"]);
   transition: all 0.3s ease-out;
 
   &:hover {
-      transform: scale(1.1);
-    }
-
+    transform: scale(1.1);
+  }
 
   @media screen and (max-width: 1430px) {
     gap: 37px;
@@ -122,8 +121,6 @@ const props = defineProps(["id", "icon", "amount", "title"]);
   @media screen and (max-width: 825px) {
     left: 10px;
   }
-
-  
 }
 
 .tab.second::after {
