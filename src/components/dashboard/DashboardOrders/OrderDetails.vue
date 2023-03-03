@@ -173,7 +173,7 @@ function closeOrder() {
       display: flex;
       height: 100%;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: flex-start;
 
       .description_section {
